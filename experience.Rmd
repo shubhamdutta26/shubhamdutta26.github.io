@@ -6,7 +6,7 @@ pagetitle: "Shubham Dutta"
 <link rel="stylesheet" href="styles.css" type="text/css">
 <link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
 
-## MassBiologics, Scientist II<br>
+### Scientist II, MassBiologics<br>
 2020 - Present
 
 - Engineering novel antibodies against cell-surface markers in Neotropic non-human primates
@@ -19,7 +19,7 @@ pagetitle: "Shubham Dutta"
 
 <hr>
 
-## Totient Inc., Scientist II<br>
+### Scientist II, Totient Inc.<br>
 2018 - 2020
 
 - Served as cell and molecular biology lead for oncology drug discovery programs
@@ -32,7 +32,7 @@ pagetitle: "Shubham Dutta"
 
 <hr>
 
-## University of Massachusetts Medical School, Postdoctoral Research Associate<br>
+### Postdoctoral Research Associate, University of Massachusetts Medical School<br>
 2018
 
 - Developing a CRISPR screen to identify novel epigenetic regulators of EWS-FLI1 fusion oncoprotein which causes Ewing’s sarcoma

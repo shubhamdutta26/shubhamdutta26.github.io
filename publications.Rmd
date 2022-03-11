@@ -6,7 +6,7 @@ pagetitle: "Shubham Dutta"
 <link rel="stylesheet" href="styles.css" type="text/css">
 <link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
 
-## Publications
+### Publications
 
 - Anamika Banerjee, Sunil Kumar Malonia, **Shubham Dutta*** (2021).
 Frontiers of CRISPR-Cas9 for cancer research and therapy. *Journal of Exploratory Research in Pharmacology*, doi:10.14218/JERP.2020.00033<br>
