@@ -1,0 +1,41 @@
+---
+title: " "
+pagetitle: "Shubham Dutta"
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
+
+## MassBiologics, Scientist II<br>
+2020 - Present
+
+- Engineering novel antibodies against cell-surface markers in Neotropic non-human primates
+- Generation and screening of hybridomas
+- Production, purification, and quality testing of antibodies and proteins
+- Generation of stable antibody producing cell lines
+- High-throughput screening and identification of top expression clones
+- Multicolor flow cytometry and panel generation for primate blood
+- Managing research associates
+
+<hr>
+
+## Totient Inc., Scientist II<br>
+2018 - 2020
+
+- Served as cell and molecular biology lead for oncology drug discovery programs
+- Developed strategies to simultaneously knockout two genes using CRISPR-Cas9
+- Experience with preparation of high-quality whole genome lentiviral sgRNA particles
+- Identification of targets using CRISPR mediated whole genome knockout screen on multiple cell lines
+- Identification of targets for recombinant antibodies using Protein arrays, western blotting, LC-MS, ELISA and immunofluorescence
+- Worked with CROs with for special assays including 3D cell culture, Mass Spectrometry, and Surface Plasmon Resonance (SPR)
+-  Managed one direct report and one matrix reports in CROs
+
+<hr>
+
+## University of Massachusetts Medical School, Postdoctoral Research Associate<br>
+2018
+
+- Developing a CRISPR screen to identify novel epigenetic regulators of EWS-FLI1 fusion oncoprotein which causes Ewing’s sarcoma
+- Executing genome wide shRNA/ RNAi and proteomic screens to identify transcription factors involved in X-chromosome inactivation
+- Genome editing by CRISPR/Cas9 for specific projects in the lab
+- Managed one intern and two junior graduate students

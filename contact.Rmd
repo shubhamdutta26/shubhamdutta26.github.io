@@ -1,0 +1,18 @@
+---
+title: " "
+pagetitle: "Shubham Dutta"
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
+
+**Massbiologics, University of Massachusetts Medical School**<br>
+460 Walk Hill St<br>
+Mattapan, MA 02126<br>
+Cell: 508-502-0586<br>
+Office: 617-474-3266<br>
+[shubhamdutta26@gmail.com](shubhamdutta26@gmail.com)<br>
+[shubham.dutta@massbiologics.org](shubham.dutta@umassmed.edu)<br>
+
+Or connect with me on [GitHub](https://github.com/shubhamdutta26), [Twitter](https://twitter.com/ursshubham), or [Linkedin](https://www.linkedin.com/in/shubhamdutta26/)
+

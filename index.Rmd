@@ -1,0 +1,22 @@
+---
+title: " "
+pagetitle: "Shubham Dutta"
+---
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
+
+## Genomics | Antibodies | Flow Cytometry | Data Science<br><br>
+
+<img src="images/profile.png" style="width:25%; border:5px solid; margin-right: 30px" align="left">
+
+### Education
+
+Ph.D. in Biomedical Sciences (2011-2018)<br>
+University of Massachusetts Medical School
+
+MS, Biophysics and Molecular Biology (2008-2010)<br>
+University of Calcutta
+
+BS, Microbiology (2005-2008)<br>
+University of Calcutta

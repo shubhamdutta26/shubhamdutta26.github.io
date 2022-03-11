@@ -1,0 +1,32 @@
+name: "Shubham Dutta"
+output_dir: "."
+navbar:
+  title: "Shubham Dutta"
+  left:
+    - text: "About me"
+      href: index.html
+    - text: "Experience"
+      href: experience.html
+    - text: "Skills"
+      href: skills.html
+    - text: "Publications"
+      href: publications.html
+    # - text: "Programming"
+    #   href: software.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: ai-google-scholar ai-lg
+      href: https://scholar.google.com/citations?user=okp_AlgAAAAJ&hl=en
+    - icon: ai-cv ai-lg
+      href: ./files/CV_ShubhamDutta.pdf
+    - icon: fab fa-github fa-lg
+      href: http://github.com/shubhamdutta26
+    - icon: fab fa-twitter fa-lg
+      href: https://twitter.com/ursshubham
+    - icon: fab fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/shubhamdutta26/
+output:
+  html_document:
+    theme: paper
+    css: 'styles.css'
