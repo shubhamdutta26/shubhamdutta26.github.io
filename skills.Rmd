@@ -21,7 +21,7 @@ Stable cell line generation (CHO, HEK, MCF10A, etc.), High-throughut clone selec
 
 ### Data Science
 
-Electronic note keeping using Evernote and R Markdown, RNA-Seq and CHIP-Seq data analysis, Genomic data mining, R programming (Base, Tidyverse, Shiny, Bioconductor), Data wrangling, analysis and visualization, Basic statistics using R, Data driven websites (using R Shiny and Markdown), Basic knowledge in Python programming
+Electronic notebook keeping using Evernote and R Markdown, RNA-Seq and CHIP-Seq data analysis, Genomic data mining, R programming (Base, Tidyverse, Shiny, Bioconductor), Data wrangling, analysis and visualization, Basic statistics using R, Data driven websites (using R Shiny and Markdown), Basic knowledge in Python programming
 
 ### Scientific Editing/ Writing
 
