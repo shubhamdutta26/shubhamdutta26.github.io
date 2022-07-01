@@ -19,7 +19,7 @@ navbar:
     - icon: ai-google-scholar ai-lg
       href: https://scholar.google.com/citations?user=okp_AlgAAAAJ&hl=en
     - icon: ai-cv ai-lg
-      href: ./files/CV.pdf
+      href: ./files/CV_ShubhamDutta.pdf
     - icon: fab fa-github fa-lg
       href: http://github.com/shubhamdutta26
     - icon: fab fa-twitter fa-lg
