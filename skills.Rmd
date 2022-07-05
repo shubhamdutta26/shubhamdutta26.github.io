@@ -9,7 +9,7 @@ pagetitle: "Shubham Dutta"
 
 ### Molecular Biology
 
-CRISPR-Cas9 Knock-outs and Knock-in, Genome wide RNAi and CRISPR screens, PCR, SDS Page, Recombinant DNA Technology, Molecular Cloning, Proficient in SnapGene tool, Mutagenesis, Western Blots, Quantitative RT-PCR, Flow Cytometry (upto 8 color sorting and Flow panel design), Gene tagging, ChIP-Seq, RNA-Seq, Preparation of NGS libraries, Fluorescence Microscopy
+CRISPR-Cas9 Knock-outs and Knock-in, Genome wide RNAi and CRISPR screens, PCR, SDS PAGE, Recombinant DNA Technology, Molecular Cloning, Proficient in SnapGene tool, Mutagenesis, Western Blots, Quantitative RT-PCR, Flow Cytometry (upto 8 color sorting and Flow panel design), Gene tagging, ChIP-Seq, RNA-Seq, Preparation of NGS libraries, Fluorescence Microscopy
 
 ### Protein Biology
 
@@ -17,7 +17,7 @@ Antibody engineering, Antibody production using transient and FedBatch culture, 
 
 ### Cell culture
 
-Stable cell line generation (CHO, HEK, MCF10A, etc.), High-throughut clone selection (AMBR15, Clonepix, Duetz system), Handling and culture of Blood and PBMCs, Generation of neurons from NPCs and iPSCs, Viral packaging and transduction, Soft agar colony formation, invasion and migration assays, Mammalian Cell culture, maintenance, Transfection and related techniques
+Stable cell line generation (CHO, HEK, MCF10A, etc.), High-throughput clone selection (AMBR15, Clonepix, Duetz system), Handling and culture of Blood and PBMCs, Generation of neurons from NPCs and iPSCs, Viral packaging and transduction, Soft agar colony formation, invasion and migration assays, Mammalian Cell culture, maintenance, Transfection and related techniques
 
 ### Data Science
 
