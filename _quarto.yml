@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Shubham Dutta"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: experience.qmd
+        text: Experience
+      - href: skills.qmd
+        text: Skills
+      - href: publications.qmd
+        text: Publications
+      - href: contacts.qmd
+        text: Contact Me
+    right:
+      - icon: google
+        href: https://scholar.google.com/citations?user=okp_AlgAAAAJ&hl=en
+      - icon: file-earmark-arrow-down-fill
+        href: files/2022-09-06_CV_ShubhamDutta.pdf
+      - icon: github
+        href: http://github.com/shubhamdutta26
+      - icon: linkedin
+        href: https://www.linkedin.com/in/shubhamdutta26/
+
+format:
+  html:
+    theme:
+      dark: litera-custom-dark.scss
+      light: litera-custom.scss
+    css: styles.css
+    toc: false
+
+
+

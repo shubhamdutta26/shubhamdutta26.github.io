@@ -1,0 +1,28 @@
+---
+title: "Shubham Dutta, Ph.D."
+description: "Genomics | Antibodies | Flow Cytometry | Data Science"
+page-layout: full
+---
+
+::: column-page-inset
+::: column-page-inset-left
+I am the Research Scientist at the University of Massachusetts Medical School working in the <br> [Non-Human Primate Research Reagent Program](https://www.nhpreagents.org/){target="_blank" style="text-decoration: none"}.
+
+#### **Education**
+
+*Ph.D., Biomedical Sciences (2011-2018)*\
+University of Massachusetts Medical School\
+Advisor: Dannel McCollum, Ph.D.\
+[Dissertation](https://escholarship.umassmed.edu/gsbs_diss/964/){target="_blank" style="text-decoration: none"}
+
+*MS, Biophysics and Molecular Biology (2008-2010)*\
+University of Calcutta
+
+*BS, Microbiology (2005-2008)*\
+University of Calcutta
+:::
+
+::: {.column-margin .column-container}
+![](images/profile-pic.png){.rounded fig-align="left"}
+:::
+:::

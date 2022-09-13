@@ -1,0 +1,25 @@
+---
+title: "Skills"
+toc: false
+page-layout: full
+---
+
+### Molecular Biology
+
+CRISPR-Cas9 knock-outs and knock-in, Genome wide RNAi and CRISPR screens, PCR, SDS PAGE, Recombinant DNA Technology, Molecular Cloning, Proficient in SnapGene, Mutagenesis, Western Blots, Quantitative RT-PCR, Flow Cytometry (upto 8 color sorting and Flow panel design), Gene tagging, ChIP-Seq, RNA-Seq, Preparation of NGS libraries, Fluorescence Microscopy
+
+### Protein Biology
+
+Antibody engineering, Antibody production using transient and Fed-Batch culture, Purification using AKTA, ELISA, Surface Plasmon resonance (SPR) using Biacore, BiLayer Interferometry (BLI) using OCTET, *In vitro* Protein purification and kinase assays, Immunoprecipitation, Phospho-protein separation by phostag gels
+
+### Cell culture
+
+Stable cell line generation (CHO, HEK, MCF10A, etc.), High-throughput clone selection (AMBR15, Clonepix, Duetz system), Handling and culture of Blood and PBMCs, Generation of neurons from NPCs and iPSCs, Viral packaging and transduction, Soft agar colony formation, invasion and migration assays, Mammalian Cell culture, maintenance, Transfection and related techniques
+
+### Data Science
+
+Electronic notebook keeping using Evernote and R Markdown, RNA-Seq and CHIP-Seq data analysis, Genomic data mining, R programming (Base, Tidyverse, Shiny, Bioconductor), Data wrangling, analysis and visualization, Basic statistics using R, Data driven websites (using R Shiny and Markdown), Basic knowledge in Python programming
+
+### Scientific Editing/ Writing
+
+Scientific papers and research proposals for grants, Editorial Board member of several peer-reviewed journals

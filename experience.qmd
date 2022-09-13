@@ -1,0 +1,36 @@
+---
+title: "Experience"
+toc: false
+page-layout: full
+---
+
+#### Scientist, MassBiologics
+##### 2020 - Present
+
+-   Lead scientist in engineering novel antibodies in Neotropic non-human primates
+-   Multicolor flow cytometry and panel generation for primate blood
+-   Generation and screening of hybridomas to identify monoclonal antibody clones
+-   High-throughput screening and identification of top expression clones
+-   Generation of stable knockout lines (CHO, HEK) using CRISPR-Cas9
+-   Production, purification, and quality testing of antibodies and proteins
+-   Generation of stable, high producing cell lines
+-   Training colleagues & research associates
+
+#### Scientist II, Totient Inc.
+##### 2018 - 2020
+
+-   Served as cell and molecular biology lead for oncology drug discovery programs
+-   Developed strategies to simultaneously knockout two genes using CRISPR-Cas9
+-   Experience with preparation of high-quality whole genome lentiviral sgRNA particles
+-   Identification of targets using CRISPR mediated whole genome knockout screen on multiple cell lines
+-   Identification of targets for recombinant antibodies using Protein arrays, ELISA and immunofluorescence
+-   Worked with CROs with for special assays including 3D cell culture and SPR (Biacore)
+-   Managed one direct report
+
+#### Postdoctoral Associate, University of Massachusetts Medical School
+##### 2018
+
+-   Developing a CRISPR screen to identify novel epigenetic regulators in Ewing’s Sarcoma
+-   Executing genome wide shRNA/ RNAi and proteomic screens to identify regulators in X-chromosome inactivation pathway
+-   Genome editing by CRISPR/Cas9 for specific projects in the lab
+-   Managed one intern and two junior graduate students
