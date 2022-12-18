@@ -29,8 +29,8 @@ website:
 format:
   html:
     theme:
-      light: litera-custom.scss
       dark: litera-custom-dark.scss
+      light: litera-custom.scss
     css: styles.css
     toc: false
 
