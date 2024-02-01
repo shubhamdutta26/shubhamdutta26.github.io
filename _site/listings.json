@@ -1,0 +1,24 @@
+[
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/tidyplate/tidyplate.html",
+      "/projects/immunotherapy/immunotherapy.html",
+      "/projects/crispr/crispr.html",
+      "/projects/trip6/trip6.html",
+      "/projects/angiomotins/angiomotins.html",
+      "/projects/ho-1/ho-1.html"
+    ]
+  },
+  {
+    "listing": "/blogs.html",
+    "items": [
+      "/blogs/elisa-curve-fitting/elisa_fit.html",
+      "/blogs/ggplot2-examples/ggplot_eg.html",
+      "/blogs/pymol-setup/pymol.html",
+      "/blogs/ubuntu-tidyverse/ubuntu.html",
+      "/blogs/ntnhp/ntnhp.html",
+      "/blogs/biacore/biacore.html"
+    ]
+  }
+]

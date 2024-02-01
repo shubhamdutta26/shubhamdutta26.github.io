@@ -4,20 +4,16 @@ toc: false
 page-layout: full
 ---
 
-- **Shubham Dutta**, Priscilla Ramos Costa, Anamika Banerjee, Diogo Magnani, Kathleen Engelman (2022). OMIP-085: Phenotypic Analysis of T-cells population in Common Marmosets (manuscript under preparation)
+-   **Shubham Dutta**, Priscilla Ramos Costa, Anamika Banerjee, Diogo Magnani, Kathleen Engelman (2024). Phenotypic Analysis of T-cells population in Common Marmosets (manuscript under preparation)
 
-- Alok K Mishra, Amjad Ali, **Shubham Dutta**, Shahid Banday, Sunil K Malonia (2022). Emerging Trends in Immunotherapy for Cancer. *Diseases*, DOI: [10.3390/diseases10030060](https://doi.org/10.3390/diseases10030060){target="_blank" style="text-decoration: none"}<br>
-[Download](files/Immunotherapy.pdf){target="_blank" style="text-decoration: none"}
+-   **Shubham Dutta** (2024). tidyplate: Transform Microplate Data into Tidy Dataframes. R package version 1.0.0. URL: [tidyplate](https://CRAN.R-project.org/package=tidyplate){target="_blank" style="text-decoration: none"}
 
-- Anamika Banerjee, Sunil Kumar Malonia, **Shubham Dutta*** (2021).
-Frontiers of CRISPR-Cas9 for cancer research and therapy. *Journal of Exploratory Research in Pharmacology*, DOI: [10.14218/JERP.2020.00033](https://dx.doi.org/10.14218/JERP.2020.00033){target="_blank" style="text-decoration: none"}<br> [Download](files/CRISPR.pdf){target="_blank" style="text-decoration: none"}<br>
-*co-corresponding author
+-   Alok K Mishra, Amjad Ali, **Shubham Dutta**, Shahid Banday, Sunil K Malonia (2022). Emerging Trends in Immunotherapy for Cancer. *Diseases*, DOI: [10.3390/diseases10030060](https://doi.org/10.3390/diseases10030060){target="_blank" style="text-decoration: none"}
 
-- **Shubham Dutta**, Sebastian Mana‐Capelli, Murugan Paramasivam, Ishani Dasgupta, Heather Cirka, Kris Billiar, Dannel McCollum (2018). TRIP6 inhibits Hippo signaling in response to tension at adherens junctions. *EMBO Reports*, DOI: [10.15252/embr.201744777](https://doi.org/10.15252/embr.201744777){target="_blank" style="text-decoration: none"}<br>
-[Download](files/TRIP6.pdf){target="_blank" style="text-decoration: none"}
+-   Anamika Banerjee, Sunil Kumar Malonia, **Shubham Dutta**\* (2021). Frontiers of CRISPR-Cas9 for cancer research and therapy. *Journal of Exploratory Research in Pharmacology*, DOI: [10.14218/JERP.2020.00033](https://dx.doi.org/10.14218/JERP.2020.00033){target="_blank" style="text-decoration: none"}<br> \*co-corresponding author
 
-- Sebastian Mana-Capelli, Murugan Paramasivam, **Shubham Dutta**, Dannel McCollum (2014). Angiomotins link F-actin architecture to Hippo pathway signaling. *Molecular biology of the cell*, DOI: [10.1091/mbc.E13-11-0701](https://dx.doi.org/10.1091%2Fmbc.E13-11-0701){target="_blank" style="text-decoration: none"}<br>
-[Download](files/AMOT.pdf){target="_blank" style="text-decoration: none"}
+-   **Shubham Dutta**, Sebastian Mana‐Capelli, Murugan Paramasivam, Ishani Dasgupta, Heather Cirka, Kris Billiar, Dannel McCollum (2018). TRIP6 inhibits Hippo signaling in response to tension at adherens junctions. *EMBO Reports*, DOI: [10.15252/embr.201744777](https://doi.org/10.15252/embr.201744777){target="_blank" style="text-decoration: none"}
 
-- Samik Bindu, Chinmay Pal, Sumanta Dey, Manish Goyal, Athar Alam, Mohd Shameel Iqbal, **Shubham Dutta**, Souvik Sarkar, Rahul Kumar, Pallab Maity, Uday Bandyopadhyay (2011). Translocation of heme oxygenase-1 to mitochondria is a novel cytoprotective mechanism against non-steroidal anti-inflammatory drug-induced mitochondrial oxidative stress, apoptosis, and gastric mucosal injury. *Journal of Biological Chemistry*. DOI: [10.1074/jbc.M111.279893](https://doi.org/10.1074/jbc.m111.279893){target="_blank" style="text-decoration: none"}<br>
-[Download](files/HO1.pdf){target="_blank" style="text-decoration: none"}
+-   Sebastian Mana-Capelli, Murugan Paramasivam, **Shubham Dutta**, Dannel McCollum (2014). Angiomotins link F-actin architecture to Hippo pathway signaling. *Molecular biology of the cell*, DOI: [10.1091/mbc.E13-11-0701](https://dx.doi.org/10.1091%2Fmbc.E13-11-0701){target="_blank" style="text-decoration: none"}
+
+-   Samik Bindu, Chinmay Pal, Sumanta Dey, Manish Goyal, Athar Alam, Mohd Shameel Iqbal, **Shubham Dutta**, Souvik Sarkar, Rahul Kumar, Pallab Maity, Uday Bandyopadhyay (2011). Translocation of heme oxygenase-1 to mitochondria is a novel cytoprotective mechanism against non-steroidal anti-inflammatory drug-induced mitochondrial oxidative stress, apoptosis, and gastric mucosal injury. *Journal of Biological Chemistry*. DOI: [10.1074/jbc.M111.279893](https://doi.org/10.1074/jbc.m111.279893){target="_blank" style="text-decoration: none"}

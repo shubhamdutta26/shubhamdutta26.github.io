@@ -1,0 +1,21 @@
+---
+title: "Setting up Pymol for visualizations"
+author: "Shubham Dutta"
+date: "2023-03-19"
+categories: [pymol, visualization]
+# image: "pymol-logo-2022.png"
+---
+
+This is how I setup Pymol before visualization and posing of different molecules.
+
+-   Open Pymol and load the pdb file.
+
+-   Set background color to white: **Display** \> **Background** \> **White**
+
+-   To hide double bonds: **Display** \> Uncheck **Show Valences**
+
+-   To display the molecule in maximum quality: **Display** \> **Quality** \> **Maximum Quality**
+
+-   To only show the side chain of a residue: `set cartoon_side_chain_helper, 1` or `set cartoon_side_chain_helper, on`
+
+    ![](demo.png){.lightbox}

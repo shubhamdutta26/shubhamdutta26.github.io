@@ -1,0 +1,27 @@
+---
+title: "TRIP6 inhibits Hippo signaling in response to tension at adherens junctions"
+author: "Shubham Dutta"
+date: "2018-02-01"
+categories: [TRIP6, Vinculin, YAP, adherens junctions, mechano‐sensing, hippo signaling]
+# image: "trip6.jpg"
+---
+
+## Synopsis
+
+The transcriptional co-activator YAP controls cell proliferation, survival, and tissue regeneration in response to changes in the mechanical environment. It is not known how mechanical stimuli such as tension are sensed and how the signal is transduced to control YAP activity. Here, we show that the LIM domain protein TRIP6 acts as part of a mechanotransduction pathway at adherens junctions to promote YAP activity by inhibiting the LATS1/2 kinases. Previous studies showed that vinculin at adherens junctions becomes activated by mechanical tension. We show that vinculin inhibits Hippo signaling by recruiting TRIP6 to adherens junctions and stimulating its binding to and inhibition of LATS1/2 in response to tension. TRIP6 competes with MOB1 for binding to LATS1/2 thereby blocking MOB1 from recruiting the LATS1/2 activating kinases MST1/2. Together, these findings reveal a novel pathway that responds to tension at adherens junctions to control Hippo pathway signaling.
+
+![TRIP6 inhibits Hippo signaling in response to tension at adherens junctions](trip6.jpg){fig-align="left"}
+
+#### Key takeaways
+
+Mechanical tension regulates Hippo signaling via the mechanosensor vinculin at adherens junctions. Tension-activated vinculin stimulates binding of LATS1/2 to TRIP6, which blocks the association of LATS1/2 with its activator MOB1, thereby increasing YAP activity.
+
+-   TRIP6 and LATS1/2 interact at adherens junctions in a tension-dependent manner.
+
+-   TRIP6 inhibits LATS1/2 by competing for its interaction with the activator protein MOB1.
+
+-   Vinculin recruits TRIP6 to adherens junctions to activate YAP in response to mechanical tension.
+
+## Reference
+
+Dutta S, Mana-Capelli S, Paramasivam M, Dasgupta I, Cirka H, Billiar K, McCollum D. TRIP6 inhibits Hippo signaling in response to tension at adherens junctions. *EMBO Rep*. 2018 Feb;19(2):337-350. doi: [10.15252/embr.201744777](https://doi.org/10.15252/embr.201744777).

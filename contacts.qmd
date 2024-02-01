@@ -1,8 +1,0 @@
----
-title: "Contact Me"
-page-layout: full
----
-
-**Massbiologics, University of Massachusetts Medical School**<br> 460 Walk Hill St<br> Mattapan, MA 02126<br> Cell: 508-502-0586<br> Office: 617-474-3266<br> [shubhamdutta26\@gmail.com](shubhamdutta26@gmail.com){target="_blank" style="text-decoration: none"}<br> [shubham.dutta\@umassmed.edu](shubham.dutta@umassmed.edu){target="_blank" style="text-decoration: none"}<br>
-
-Or connect with me on [GitHub](https://github.com/shubhamdutta26){target="_blank" style="text-decoration: none"} or [Linkedin](https://www.linkedin.com/in/shubhamdutta26/){target="_blank" style="text-decoration: none"}.

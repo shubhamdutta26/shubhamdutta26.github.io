@@ -1,28 +1,45 @@
 ---
-title: "Shubham Dutta, Ph.D."
-description: "Genomics | Antibodies | Flow Cytometry | Data Science"
+title: "**Shubham Dutta, Ph.D.**"
+image: img/profile-pic.png
 page-layout: full
+about:
+  template: trestles
+  image-width: 20em
+  image-shape: rounded
+  links:
+    - icon: google
+      text: Google scholar
+      href: https://scholar.google.com/citations?user=okp_AlgAAAAJ&hl=en
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/shubhamdutta26/
+    - icon: github
+      text: Github
+      href: https://github.com/shubhamdutta26
+    - icon: envelope
+      text: Contact me
+      href: mailto:shubhamdutta26@gmail.com
 ---
 
-::: column-page-inset
-::: column-page-inset-left
-I am the Research Scientist at the University of Massachusetts Medical School working in the <br> [Non-Human Primate Research Reagent Program](https://www.nhpreagents.org/){target="_blank" style="text-decoration: none"}.
+[Genomics \| Antibodies \| Flow Cytometry \| Data Science]{style="font-size: 1.5em;"}
 
-#### **Education**
+I am the Senior Research Scientist at the Massbiologics working on therapeutic antibodies in human and non-human primates.
 
-*Ph.D., Biomedical Sciences (2011-2018)*\
-University of Massachusetts Medical School\
-Advisor: Dannel McCollum, Ph.D.\
-[Dissertation](https://escholarship.umassmed.edu/gsbs_diss/964/){target="_blank" style="text-decoration: none"}
+### Education
 
-*MS, Biophysics and Molecular Biology (2008-2010)*\
-University of Calcutta
+**Ph.D., Biomedical Sciences (2011-2018)**\
+University of Massachusetts Medical School, Worcester, MA\
 
-*BS, Microbiology (2005-2008)*\
-University of Calcutta
-:::
+**MS, Biophysics and Molecular Biology (2008-2010)**\
+University of Calcutta, Kolkata, WB
 
-::: {.column-margin .column-container}
-![](images/profile-pic.png){.rounded fig-align="left"}
-:::
-:::
+**BS, Microbiology (2005-2008)**\
+University of Calcutta, Kolkata, WB
+
+### Experience
+
+**Massbiologics** \| Senior Research Scientist \| January 2024 - present
+
+**Massbiologics** \| Scientist II \| September 2020 - January 2024
+
+**Totient Inc.** \| Scientist II \| September 2018 - January 2020

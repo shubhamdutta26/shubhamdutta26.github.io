@@ -10,7 +10,7 @@ CRISPR-Cas9 knock-outs and knock-in, Genome wide RNAi and CRISPR screens, PCR, S
 
 ### Protein Biology
 
-Antibody engineering, Antibody production using transient and Fed-Batch culture, Purification using AKTA, ELISA, Surface Plasmon resonance (SPR) using Biacore, BiLayer Interferometry (BLI) using OCTET, *In vitro* Protein purification and kinase assays, Immunoprecipitation, Phospho-protein separation by phostag gels
+Antibody engineering, Yeast VHH hybrid screen, Antibody production using transient and Fed-Batch culture, Purification using AKTA, ELISA, Surface Plasmon resonance (SPR) using Biacore, BiLayer Interferometry (BLI) using OCTET, *In vitro* Protein purification and kinase assays, Immunoprecipitation, Phospho-protein separation by phostag gels
 
 ### Cell culture
 

@@ -1,0 +1,38 @@
+,Column Names,Description
+1,Species,Scientific name of the species
+2,AOH_name,Name of Area of Habitat raster
+3,order_name,Order of the species
+4,family_name,Family of the species
+5,Genus,Genus of the species
+6,Seasonality,Breeding or non breeding range of the species (S1 = Breeding range and S2 = Non breeding range) (for birds only)
+7,Total_suitable_pixels_threshold_1,Total AOH pixels at threshold 1
+8,Total_suitable_pixels_threshold_2,Total AOH pixels at threshold 2
+9,Total_suitable_pixels_threshold_3,Total AOH pixels at threshold 3
+10,Total_range_pixels,Total range pixels 
+11,Model_prevalence_threshold_1,Model prevalence of AOH at threshold 1
+12,Model_prevalence_threshold_2,Model prevalence of AOH at threshold 2
+13,Model_prevalence_threshold_3,Model prevalence of AOH at threshold 3
+14,Minimum_elevation,Minimum elevation limit of the species used in producing AOH
+15,Maximum_elevation,Maximum elevation limit of the species used in producing AOH
+16,Minimum_elevation_old,Old minimum elevation limit  in Birdlife International’s database (for birds only)
+17,Maximum_elevation_old,Old maximum elevation limit  in Birdlife International’s database (for birds only)
+18,Source_old,Source of old elevation (for birds only)
+19,Remarks_elevation_DEM_fill,Details about elevation extraction using occurrence points and DEM. 
+20,Model_prevalence_habitat,Model prevalence of AOH when clipped using only suitable habitats
+21,Model_prevalence_elevation,Model prevalence of AOH when clipped using only suitable elevation limits
+22,Percentage_clip_elevation_only,Percentage of range clipped by unsuitable elevation
+23,Percentage_clip_habitat_only,Percentage of range clipped by unsuitable habitat
+24,Percentage_clip_habitat_and_elevation,Percentage of range clipped by unsuitable habitat and unsuitable elevation
+25,Number_of_habitats,Number of habitats a species is coded to in the IUCN Red List’s database
+26,Logistic_upper_outlier,Is the AOH an upper outlier based on logistic regression (Yes or No)
+27,Logistic_lower_outlier,Is the AOH an lower outlier based on logistic regression (Yes or No)
+28,Logistic_lower_outlier_issue,"Reason for AOH to be an outlier (Elevation, habitat or elevation and habitat issues) "
+29,Realm,Geographical realm of the species
+30,Estimated_model_prevalence_logistic,Estimated model prevalence using the logistic regression model
+31,Red_List_Category,Red list category of the species
+32,Mean_model_prevalence,Mean model prevalence of the species for species with breeding and non breeding range (for birds only)
+33,NULL_Reason,Why the AOH map is null
+34,Point_Prevalence_T1,Point prevalance for AOH maps with threshold 1
+35,Point_Prevalence_T2,Point prevalance for AOH maps with threshold 2
+36,Point_Prevalence_T3,Point prevalance for AOH maps with threshold 3
+37,Number_of_Validation_Points,Number of point localities used to validate the AOH maps

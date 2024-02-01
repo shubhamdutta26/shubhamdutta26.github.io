@@ -1,0 +1,17 @@
+---
+title: "Emerging Trends in Immunotherapy for Cancer"
+author: "Shubham Dutta"
+date: "2022-09-06"
+categories: [Review, checkpoint inhibitors, monoclonal antibody, bispecific antibody, CAR-T, PD-1/PDL-1, BiTEs, oncolytic virus, cancer vaccine]
+# image: "immunotherapy.png"
+---
+
+## Synopsis
+
+Recent advances in cancer immunology have enabled the discovery of promising immunotherapies for various malignancies that have shifted the cancer treatment paradigm. The innovative research and clinical advancements of immunotherapy approaches have prolonged the survival of patients with relapsed or refractory metastatic cancers. Since the U.S. FDA approved the first immune checkpoint inhibitor in 2011, the field of cancer immunotherapy has grown exponentially. Multiple therapeutic approaches or agents to manipulate different aspects of the immune system are currently in development. These include cancer vaccines, adoptive cell therapies (such as CAR-T or NK cell therapy), monoclonal antibodies, cytokine therapies, oncolytic viruses, and inhibitors targeting immune checkpoints that have demonstrated promising clinical efficacy. Multiple immunotherapeutic approaches have been approved for specific cancer treatments, while others are currently in preclinical and clinical trial stages. Given the success of immunotherapy, there has been a tremendous thrust to improve the clinical efficacy of various agents and strategies implemented so far. Here, we present a comprehensive overview of the development and clinical implementation of various immunotherapy approaches currently being used to treat cancer. We also highlight the latest developments, emerging trends, limitations, and future promises of cancer immunotherapy.
+
+![Illustration depicting various immunotherapy approaches for cancer treatment.](immunotherapy.png){fig-align="left"}
+
+## Reference
+
+Mishra, Alok K., Amjad Ali, Shubham Dutta, Shahid Banday, and Sunil K. Malonia. 2022. "Emerging Trends in Immunotherapy for Cancer" *Diseases* 10, no. 3: 60. doi: [10.3390/diseases10030060](https://doi.org/10.3390/diseases10030060)

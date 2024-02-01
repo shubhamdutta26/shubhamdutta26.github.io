@@ -1,0 +1,105 @@
+---
+title: "Neotropic non-human primates"
+author: "Shubham Dutta"
+date: "2023-03-09"
+categories: [new world, primates, neotropic]
+# image: "marmoset.jpg"
+code-fold: true
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+Neotropic primates are the second largest non-human primate family in the world.
+
+```{r}
+#| label: setup
+library(readr)
+library(tidyverse)
+library(RColorBrewer)
+```
+
+```{r}
+#| label: data-prep
+mammals <- read_csv("data/MAMMALS_AOH_Metadata_02_07_2021.csv") %>% 
+  dplyr::select(-id) %>% 
+  tidyr::separate(
+    col = Species,
+    into = c("generic_name", "specific_name"),
+    sep = "_"
+  ) %>% 
+  tidyr::unite(
+    col = "Species", 
+    "generic_name", "specific_name", 
+    sep = " ",
+    na.rm = TRUE, 
+    remove = FALSE
+  )
+```
+
+## Old world vs. New world
+
+![](map.png){fig-align="center" width="800"}
+
+## Neotropic primates are the second largest family
+
+```{r}
+#| label: primate-species-by-region
+primates <- mammals %>% 
+  filter(Order == "PRIMATES")
+
+primates_counts <- primates %>% 
+  filter(Order == "PRIMATES") %>% 
+  count(Realms, sort = T) %>% 
+  mutate(neotropic = ifelse(Realms == "Neotropic", "Yes", "No")) %>% 
+  drop_na()
+
+ggplot(primates_counts,
+       aes(x = fct_reorder(Realms, n, .desc = T), 
+               y = n, 
+               fill = neotropic)) +
+  geom_col() +
+  geom_text(aes(label = n), vjust = -1) +
+  labs(x = NULL, y = "primate species in each region") +
+  theme_classic(base_size = 15) +
+  scale_y_continuous(
+    limits = c(0, 200),
+    expand = expansion(0)
+    ) +
+  scale_fill_manual(values = c("gray", "lightblue")) +
+  theme(
+    legend.position = "none",
+    axis.title.x  = element_text(size = 13, face = "bold"),
+    axis.title.y  = element_text(size = 13, face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r}
+#| label: ntnhp
+ntnhp <- primates |>
+  filter(Realms == "Neotropic")
+
+ntnhp_family <- ntnhp |>
+  count(Family, sort = T) |>
+  drop_na()
+
+ggplot(ntnhp_family, aes(x = fct_reorder(Family, n, .desc = T), y = n)) +
+  geom_col(fill = "gray") +
+  labs(x = NULL,
+       y = "number of neotropic species\n in each family") +
+  geom_text(aes(label = n), vjust = -1) +
+  theme_classic(base_size = 12) +
+  scale_y_continuous(
+    limits = c(0, 60),
+    expand = expansion(0)
+    ) +
+  theme(
+    axis.title.x  = element_text(size = 13, face = "bold"),
+    axis.title.y  = element_text(size = 13, face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+```

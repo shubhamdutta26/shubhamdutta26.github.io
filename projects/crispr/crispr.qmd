@@ -1,0 +1,25 @@
+---
+title: "Frontiers of CRISPR-Cas9 for Cancer Research and Therapy"
+author: "Shubham Dutta"
+date: "2021-04-28"
+categories: [Review, CRISPR, Cas9, Cancer, Gene editing, Non-coding RNA]
+# image: "crispr.jpeg"
+---
+
+## Synopsis
+
+In recent years, gene editing technologies have made significant progress in understanding gene function and regulation. The Clustered regularly interspaced short palindromic repeats-CRISPR associated protein 9 (CRISPR-Cas9) system has emerged as a versatile tool for gene editing and genome engineering. In the last few years, CRISPR-Cas9 technology has been widely applied to cancer research, mainly to understand the mechanisms of oncogenesis, drug-target identification, and the development of various cell-based therapies. When combined with genome sequence information, this technology has also shown promise to cure heritable genetic disorders. This review summarizes some of the recent developments and preclinical applications of CRISPR-Cas9 technology in cancer research and therapy. We will discuss how CRISPR based approaches have been used as a tool to identify cancer-specific vulnerabilities and potential applications in cancer therapy.
+
+![Schematic representation of CRISPR-Cas9-mediated genome editing.](crispr.jpeg){fig-align="left"}
+
+#### Key takeaways
+
+\(a\) The Cas9 nuclease is directed to the target DNA by complementary base pairing with its bound guide RNA in which the target site is followed by a PAM sequence (NAG, NAG). Cleavage of the dsDNA promotes either error-prone NHEJ or HDR.
+
+\(b\) Two guide RNAs (targeting two different sites, namely target A and target B) can be used simultaneously to remove a longer stretch of DNA and a new DNA can be inserted using a donor DNA using HDR.
+
+\(c\) Catalytically dead Cas9 (dCas9) can be tagged with transcription activators (or repressors) and fluorescent proteins (such as GFP) to regulate gene expression or visualization. CRISPR, clustered regularly interspaced short palindromic repeats; Cas9, CRISPR associated protein 9; dCas9, dead CRISPR associated protein 9; gRNA, guide RNA; mRNA, messenger RNA; dsDNA, double stranded deoxyribonucleic acid; PAM, protospacer adjacent motif; NHEJ, non-homologous
+
+## Reference
+
+Banerjee A, Malonia SK, Dutta S. Frontiers of CRISPR-Cas9 for Cancer Research and Therapy. *J Explor Res Pharmacol*. 2021;6(3):96-104. doi: [10.14218/JERP.2020.00033](https://dx.doi.org/10.14218/JERP.2020.00033).

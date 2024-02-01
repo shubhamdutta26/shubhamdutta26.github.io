@@ -4,19 +4,36 @@ toc: false
 page-layout: full
 ---
 
-#### Scientist, MassBiologics
+### Professional Summary
+
+-   10+ years of experience in experiment design and assay development
+-   Experience antibody and soluble protein developability, production, purification & QC
+-   Experience in CRISPR-based gene editing in mammalian cell lines (KO and KI)
+-   Development and selection of stable clonal cell lines using PiggyBac system
+-   Experience in hybridoma, yeast display screen, and 8-color flow cytometry
+-   AKTA based purification and optimization of proteins using affinity columns
+-   Experience with antibody target validation and affinity maturation
+-   Characterize protein interaction and kinetics using ELISA, SPR, and BLI
+-   Proficient in data analysis, statistical tests, visualization, and presentation in R/ Python
+-   Establishing new and reviewing SOPs and laboratory protocols
+-   Effective communication, organizational skills, record keeping
+-   Ability to learn quickly, work independently, and train colleagues
+
+### Senior Research Scientist, MassBiologics
+
 ##### 2020 - Present
 
--   Lead scientist in engineering novel antibodies in Neotropic non-human primates
+-   Project manager and lead in developing novel antibodies and proteins for non-human primate (NHP) preclinical studies
+-   Optimization of bispecific, multispecific, and alternative antibody formats
 -   Multicolor flow cytometry and panel generation for primate blood
--   Generation and screening of hybridomas to identify monoclonal antibody clones
--   High-throughput screening and identification of top expression clones
--   Generation of stable knockout lines (CHO, HEK) using CRISPR-Cas9
--   Production, purification, and quality testing of antibodies and proteins
--   Generation of stable, high producing cell lines
+-   Generation of high producing stable clonal cell lines for antibodies and protein production
+-   Improve antibody yield and function by gene editing
+-   Characterizing protein-protein interaction using ELISA and kinetics using SPR and BLI
+-   Establishing new and reviewing SOPs and laboratory protocols
 -   Training colleagues & research associates
 
-#### Scientist II, Totient Inc.
+### Scientist II, Totient Inc.
+
 ##### 2018 - 2020
 
 -   Served as cell and molecular biology lead for oncology drug discovery programs
@@ -27,7 +44,8 @@ page-layout: full
 -   Worked with CROs with for special assays including 3D cell culture and SPR (Biacore)
 -   Managed one direct report
 
-#### Postdoctoral Associate, University of Massachusetts Medical School
+### Postdoctoral Associate, University of Massachusetts Medical School
+
 ##### 2018
 
 -   Developing a CRISPR screen to identify novel epigenetic regulators in Ewing’s Sarcoma

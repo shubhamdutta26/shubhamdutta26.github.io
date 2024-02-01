@@ -1,0 +1,27 @@
+---
+title: "Installing tidyverse in Ubuntu 22.04.3 LTS"
+author: "Shubham Dutta"
+date: "2023-03-19"
+categories: [r, tidyverse, ubuntu]
+image: "Ubuntu-logo-2022.png"
+---
+
+Installing the `Tidyverse` package in Ubuntu can be challenging compared to Windows or Mac. This short tutorial will show how to install it in Ubuntu 22.04.3 LTS.
+
+#### Update Ubuntu from terminal
+
+`sudo apt-get update`
+
+#### Install base R from terminal
+
+`sudo apt install r-base`
+
+`sudo apt install r-base-dev`
+
+#### Install Ubuntu packages for R from terminal
+
+`sudo apt-get install r-cran-curl r-cran-openssl r-cran-xml2`
+
+#### Install tidyverse from R/ RStudio
+
+`install.packages("tidyverse")`

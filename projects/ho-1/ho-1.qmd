@@ -1,0 +1,17 @@
+---
+title: "Translocation of heme oxygenase-1 to mitochondria is a novel cytoprotective mechanism against NSAIDs"
+author: "Shubham Dutta"
+date: "2011-11-01"
+categories: [Heme Oxygenase, Mitochondrial Apoptosis, Nrf2,Oxidative Stress, Reactive Oxygen Species (ROS)]
+# image: "ho-1.jpeg"
+---
+
+## Synopsis
+
+The mechanism of action of heme oxygenase-1 (HO-1) in mitochondrial oxidative stress (MOS)-mediated apoptotic tissue injury was investigated. MOS-mediated gastric mucosal apoptosis and injury were introduced in rat by indomethacin, a non-steroidal anti-inflammatory drug. Here, we report that HO-1 was not only induced but also translocated to mitochondria during gastric mucosal injury to favor repair mechanisms. Furthermore, mitochondrial translocation of HO-1 resulted in the prevention of MOS and mitochondrial pathology as evident from the restoration of the complex I-driven mitochondrial respiratory control ratio and transmembrane potential. Mitochondrial translocation of HO-1 also resulted in time-dependent inhibition of apoptosis. We searched for the plausible mechanisms responsible for HO-1 induction and mitochondrial localization. Free heme, the substrate for HO-1, was increased inside mitochondria during gastric injury, and mitochondrial entry of HO-1 decreased intramitochondrial free heme content, suggesting that a purpose of mitochondrial translocation of HO-1 is to detoxify accumulated heme. Heme may activate nuclear translocation of NF-E2-related factor 2 to induce HO-1 through reactive oxygen species generation. Electrophoretic mobility shift assay and chromatin immunoprecipitation studies indicated nuclear translocation of NF-E2-related factor 2 and its binding to HO-1 promoter to induce HO-1 expression during gastric injury. Inhibition of HO-1 by zinc protoporphyrin aggravated the mucosal injury and delayed healing. Zinc protoporphyrin further reduced the respiratory control ratio and transmembrane potential and enhanced MOS and apoptosis. In contrast, induction of HO-1 by cobalt protoporphyrin reduced MOS, corrected mitochondrial dysfunctions, and prevented apoptosis and gastric injury. Thus, induction and mitochondrial localization of HO-1 are a novel cytoprotective mechanism against MOS-mediated apoptotic tissue injury.
+
+![ZnPP aggravates gastric mucosal injury and slows down healing process in vivo.](ho-1.jpeg){fig-align="left" width="496"}
+
+## Reference
+
+Bindu S, Pal C, Dey S, Goyal M, Alam A, Iqbal MS, Dutta S, Sarkar S, Kumar R, Maity P, Bandyopadhyay U. Translocation of heme oxygenase-1 to mitochondria is a novel cytoprotective mechanism against non-steroidal anti-inflammatory drug-induced mitochondrial oxidative stress, apoptosis, and gastric mucosal injury. *J Biol Chem*. 2011 Nov 11;286(45):39387-402. doi: [10.1074/jbc.M111.279893](https://doi.org/10.1074/jbc.m111.279893).
