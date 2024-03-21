@@ -8,6 +8,14 @@ page-layout: full
 
 -   **Shubham Dutta** (2024). tidyplate: Transform Microplate Data into Tidy Dataframes. R package version 1.0.0. URL: [tidyplate](https://CRAN.R-project.org/package=tidyplate){target="_blank" style="text-decoration: none"}
 
+-   Kathleen Engelman and **Shubham** **Dutta**, *Callithrix jacchus* immunoglobulin heavy chain constant region mRNA, partial cds. Nucleotide. Bethesda (MD): National Library of Medicine (US), National Center for Biotechnology Information; (2023) – Accession No. [OQ632781.1](https://www.ncbi.nlm.nih.gov/nuccore/OQ632781.1/)
+
+-   Kathleen Engelman and **Shubham** **Dutta**, *Saimiri boliviensis* immunoglobulin heavy chain constant region mRNA, partial cds. Nucleotide. Bethesda (MD): National Library of Medicine (US), National Center for Biotechnology Information; (2023) – Accession No. [OQ632782.1](https://www.ncbi.nlm.nih.gov/nuccore/OQ632782.1)
+
+-   Kathleen Engelman and **Shubham** **Dutta**, *Callithrix jacchus* immunoglobulin light chain constant region mRNA, partial cds. Nucleotide. Bethesda (MD): National Library of Medicine (US), National Center for Biotechnology Information; (2023) – Accession No. [OQ632783.1](https://www.ncbi.nlm.nih.gov/nuccore/OQ632783.1)
+
+-   Kathleen Engelman and **Shubham** **Dutta**, *Saimiri boliviensis* immunoglobulin light chain constant region mRNA, partial cds. Nucleotide. Bethesda (MD): National Library of Medicine (US), National Center for Biotechnology Information; (2023) – Accession No. [OQ632784.1](https://www.ncbi.nlm.nih.gov/nuccore/OQ632784.1)
+
 -   Alok K Mishra, Amjad Ali, **Shubham Dutta**, Shahid Banday, Sunil K Malonia (2022). Emerging Trends in Immunotherapy for Cancer. *Diseases*, DOI: [10.3390/diseases10030060](https://doi.org/10.3390/diseases10030060){target="_blank" style="text-decoration: none"}
 
 -   Anamika Banerjee, Sunil Kumar Malonia, **Shubham Dutta**\* (2021). Frontiers of CRISPR-Cas9 for cancer research and therapy. *Journal of Exploratory Research in Pharmacology*, DOI: [10.14218/JERP.2020.00033](https://dx.doi.org/10.14218/JERP.2020.00033){target="_blank" style="text-decoration: none"}<br> \*co-corresponding author
