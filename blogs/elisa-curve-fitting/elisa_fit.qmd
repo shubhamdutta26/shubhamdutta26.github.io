@@ -14,126 +14,88 @@ Here is an example of how to fit and analyse ELISA data using `ggplot2`, `drc`, 
 
 ```{r}
 #| label: setup
-library(drc)
+library(tidyplate)
 library(tidyverse)
-library(openxlsx)
+library(drc)
 library(broom)
 library(ggsci)
-library(gt)
 ```
 
+First we import plate data using the `tidy_plate` function from the `tidyplate` package:
 ```{r}
 #| label: import-elisa-data
-raw_data <- read.xlsx(xlsxFile = "test-data/elisa-test-triplicate.xlsx",
-                      rowNames = F,
-                      colNames = F,
-                      rows = c(19:26),
-                      cols = c(3:14))
+raw_data <- tidy_plate("data/elisa_example.xlsx")
+glimpse(raw_data)
 ```
 
-## Data for plotting
-
+## Prepare data before plotting
 ```{r}
-#| label: prep-elisa-data
-# Compute the antigen blank mean
-compute_blank_mean <- raw_data |>
-  dplyr::mutate(blank_mean = rowMeans(across(X1:X12)))
+#| label: data-prep
+blank_data <- raw_data |>
+    dplyr::filter(primary_mab_name == "blank")
+mean_blank <- mean(blank_data[["od450"]], na.rm = TRUE)
 
-blank_mean <- compute_blank_mean[8, 13] |> as.numeric() |> round(digits = 4)
-
-# Substract blank_mean from all data
-raw_data_minus_blank <- raw_data |>
-  purrr::map_df(~. - blank_mean)
-
-# Generating antibody dilution values
-ab_dilutions <- round(10 / 4^(0:6), 3)
-
-# Full data
-final_data <- tibble(ab_dilutions, raw_data_minus_blank[1:7, 1:12]) |>
-  rename("Positive_1" = X1,"Positive_2" = X2,"Positive_3" = X3,
-         "Experiment_1" = X4,"Experiment_2" = X5,"Experiment_3" = X6,"NoHisAntigen_1" = X7,"NoHisAntigen_2" = X8,"NoHisAntigen_3" = X9,
-         "SecondaryOnly_1" = X10,"SecondaryOnly_2" = X11,"SecondaryOnly_3" = X12)
-
-data_pivot <- final_data |>
-  pivot_longer(!ab_dilutions,
-               names_to = "Experiment",
-               values_to = "od450") |>
-  separate(col = Experiment,
-           into = c("Experiment", "rep"),
-           sep = "_")
-
-# compute stats
-data_pivot_summary <- data_pivot |>
-  group_by(ab_dilutions, Experiment) |>
-  summarise(
-    od450_sd = sd(od450),
-    od450_mean = mean(od450)
-  )
-
-final_data %>% gt()
+summary <- raw_data |>
+    dplyr::filter(primary_mab_name != "blank") |>
+    dplyr::mutate(blanked_od = od450 - mean_blank) |>
+    dplyr::group_by(primary_mab_name, primary_mab_conc) |>
+    dplyr::summarise(
+      mean_od = mean(blanked_od, na.rm = TRUE),
+      mean_sd = sd(blanked_od, na.rm = TRUE),
+      .groups = 'drop'
+    )
+head(summary)
 ```
 
 ## The final plot
 
 ```{r}
 #| label: plot-elisa-data
-#| fig-width: 10
-ggplot(data_pivot_summary, 
-       aes(x = ab_dilutions, 
-           y = od450_mean, 
-           color = Experiment, 
-           group = Experiment,
-           shape = Experiment)) +
-  geom_point(size = 3, stroke = 1) +
-  geom_smooth(method = drm, 
-              method.args = list(fct = L.4()), 
-              se = F, 
-              linewidth = 1.0) +
-  geom_errorbar(aes(ymin = od450_mean-od450_sd, 
-                    ymax = od450_mean+od450_sd, 
-                    color = Experiment),
-                size = 1.0,
+#| fig-width: 7
+theme_set(theme_bw(base_size = 20))
+ggplot(summary, aes(x = primary_mab_conc, 
+                    y = mean_od, 
+                    group = primary_mab_name, 
+                    color = primary_mab_name)) +
+  ggplot2::geom_point(shape = 21, size = 3, stroke = 1.5) +
+  geom_smooth(method = drc::drm, 
+              method.args = list(fct = drc::L.4()),
+              se = FALSE, linewidth = 1) +
+  geom_errorbar(aes(ymin = mean_od - mean_sd,
+                    ymax = mean_od + mean_sd),
                 width = 0.1) +
   scale_x_log10() +
-  scale_y_continuous(limits = c(-0.5, 3.5),
-                     expand = expansion(0),
-                     n.breaks = 7) +
-  theme_classic(base_size = 20) +
-  labs(x = "Log antibody dilutions (µg/ml)",
-       y = "OD~450~") +
-  scale_color_manual(name = NULL,
-                     labels = c("Experiment", "Negative", "Positive", "Detection only"),
-                     values = c("#E64B35FF", "#4DBBD5FF", "#00A087FF", "#3C5488FF")
-                     ) +
-  scale_shape_manual(name = NULL,
-                     labels = c("Experiment", "Negative", "Positive", "Detection only"),
-                     values = c(0,1,2,5)
-                     ) +
+  scale_color_npg() +
+  labs(x = "Log of antibody concentration (µg/ml)",
+       y = "OD~450~",
+       color = NULL) +
   theme(axis.title.y = ggtext::element_markdown(),
         legend.position = c(0.2, 0.7))
-
 ```
 
 ## Statistical analysis of the fit
 
+We have to remove "blanks" first before modeling.
 ```{r}
 #| label: stats-elisa-data
-drm_model <- drm(formula = od450~ab_dilutions, 
-                 curveid = Experiment, 
-                 data = data_pivot, 
+raw_data_no_blanks <- subset(raw_data, primary_mab_name != "blank")
+drm_model <- drm(formula = od450~primary_mab_conc, 
+                 curveid = primary_mab_name, 
+                 data = raw_data_no_blanks, 
                  fct = LL.4(names=c("Slope", "Lower", "Upper", "ED50")))
-# tidy(drm_model) %>% gt()
-# glance(drm_model) %>% gt()
-# augment(drm_model, data = data_pivot) %>% gt()
+# tidy(drm_model)
+# glance(drm_model)
+# augment(drm_model, data = raw_data_no_blanks)
 ```
 
 ```{r}
-#| label: plot-residuals,
-ggplot(augment(drm_model, data = data_pivot), 
-       aes(.fitted, .resid, color = as.factor(ab_dilutions))) +
+#| label: plot-residuals
+#| fig-width: 7
+ggplot(augment(drm_model, data = raw_data_no_blanks), 
+       aes(.fitted, .resid, color = as.factor(primary_mab_conc))) +
   geom_hline(yintercept = 0) +
   geom_point(shape = 21, size = 3, stroke = 1.5) +
-  theme_bw(base_size = 20) +
-  labs(color = "dilutions (Log)") +
-  scale_color_npg()
+  labs(color = "dilutions") +
+  scale_color_npg() +
+  facet_grid(cols = vars(primary_mab_name))
 ```

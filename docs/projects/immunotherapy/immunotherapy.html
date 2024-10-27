@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -117,10 +117,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../contact.html"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -214,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Recent advances in cancer immunology have enabled the discovery of promising immunotherapies for various malignancies that have shifted the cancer treatment paradigm. The innovative research and clinical advancements of immunotherapy approaches have prolonged the survival of patients with relapsed or refractory metastatic cancers. Since the U.S. FDA approved the first immune checkpoint inhibitor in 2011, the field of cancer immunotherapy has grown exponentially. Multiple therapeutic approaches or agents to manipulate different aspects of the immune system are currently in development. These include cancer vaccines, adoptive cell therapies (such as CAR-T or NK cell therapy), monoclonal antibodies, cytokine therapies, oncolytic viruses, and inhibitors targeting immune checkpoints that have demonstrated promising clinical efficacy. Multiple immunotherapeutic approaches have been approved for specific cancer treatments, while others are currently in preclinical and clinical trial stages. Given the success of immunotherapy, there has been a tremendous thrust to improve the clinical efficacy of various agents and strategies implemented so far. Here, we present a comprehensive overview of the development and clinical implementation of various immunotherapy approaches currently being used to treat cancer. We also highlight the latest developments, emerging trends, limitations, and future promises of cancer immunotherapy.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="immunotherapy.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+<p><img src="immunotherapy.png" class="img-fluid figure-img"></p>
 <figcaption>Illustration depicting various immunotherapy approaches for cancer treatment.</figcaption>
 </figure>
 </div>
@@ -450,6 +446,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -484,7 +498,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

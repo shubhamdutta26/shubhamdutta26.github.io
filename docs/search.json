@@ -25,7 +25,7 @@
     "href": "projects.html",
     "title": "Shubham Dutta",
     "section": "",
-    "text": "tidyplate: Transform Microplate Data into Tidy Dataframes\n\n\n\n\n\n\n\n\n\n\n\nJan 11, 2024\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nEmerging Trends in Immunotherapy for Cancer\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2022\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nFrontiers of CRISPR-Cas9 for Cancer Research and Therapy\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nTRIP6 inhibits Hippo signaling in response to tension at adherens junctions\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2018\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nAngiomotins link F-actin architecture to Hippo pathway signaling\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2014\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nTranslocation of heme oxygenase-1 to mitochondria is a novel cytoprotective mechanism against NSAIDs\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2011\n\n\nShubham Dutta\n\n\n\n\n\n\nNo matching items"
+    "text": "tidyplate: Transform Microplate Data into Tidy Dataframes\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2024\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nEmerging Trends in Immunotherapy for Cancer\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2022\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nFrontiers of CRISPR-Cas9 for Cancer Research and Therapy\n\n\n\n\n\n\n\n\n\n\n\nApr 28, 2021\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nTRIP6 inhibits Hippo signaling in response to tension at adherens junctions\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2018\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nAngiomotins link F-actin architecture to Hippo pathway signaling\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2014\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nTranslocation of heme oxygenase-1 to mitochondria is a novel cytoprotective mechanism against NSAIDs\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2011\n\n\nShubham Dutta\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/crispr/crispr.html",
@@ -74,28 +74,28 @@
     "href": "projects/tidyplate/tidyplate.html",
     "title": "tidyplate: Transform Microplate Data into Tidy Dataframes",
     "section": "",
-    "text": "Microtiter plates or microplates have become a standard tool in analytical research and clinical diagnostic testing laboratories. They are convenient, high-throughput tools for organizing tissue culture, PCR tests (such as HIV/ COVID screening), or immunological assays such as ELISA, RIA and FIA. They offer many advantages over traditional assay formats including reduced sample and reagent volumes, increased throughput, and ease of automation. The goal of tidyplate is to help researchers convert different types of microplates into tidy dataframes which can be used in data analysis (Dutta 2024). tidyplate accepts xlsx and csv files formatted in a specific way as input. tidyplate supports all types of standard microplate formats namely: 6-well, 12-well, 24-well, 48-well, 96-well, 384-well, and 1536-well plates.\ntidyplate has two functions:\n\ntidy_plate: This function takes the input file (xlsx or csv) and transforms into a tidy dataframe.\ncheck_plate: This function checks whether the input file is valid for use with tidy_plate() function.\n\n\n\nTo install tidyplate from CRAN:\n\n# install.packages(\"tidyplate\")\n\nYou can install the development version of tidyplate from GitHub with:\n\n# install.packages(\"devtools\")\n# devtools::install_github(\"shubhamdutta26/tidyplate\")\n\n\n\n\n\n\n\n\n\nThis figure demonstrates how to format the 12-well plate input file. Colors are for visualization purposes only.\n\n\n\n\nThe input xlsx or csv should be formatted in a specific way:\n\nTop left corner must hold the name for that plate.\nColumn names should be: 1, 2, 3, and so on and so forth.\nRow names should be: A, B, C, and so on and so forth.\nThere must be an empty row between each plate.\n\n\n\n\nThis is an example which shows you how to use the tidyplate. If the input file is an xlsx file it reads the first sheet by default. Users can specify sheet using the sheet argument for an xlsx file. Users can also specify the variable name of column where well ids will be stored (defaults to “well”). Please make sure that well_id argument does not match individual plate names in the input file.\nFirst check if the input file is valid or not:\n\nlibrary(tidyplate)\ncheck_plate(\"example_12_well.xlsx\")\n\nexample_12_well.xlsx: OK; Plate type: 12 well\n\n\nImport the file as a tidy dataframe:\n\ndata &lt;- tidy_plate(\"example_12_well.xlsx\")\n\nData: example_12_well.xlsx; Plate type: 12 well plate\n\nhead(data)\n\n# A tibble: 6 × 4\n  well  drug      cell_line percent_survived\n  &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                &lt;int&gt;\n1 A01   Neomycin  HEK293                  60\n2 A02   Puromycin HEK293                  22\n3 A03   Neomycin  Hela                    52\n4 A04   Puromycin Hela                    18\n5 B01   Neomycin  HEK293                  62\n6 B02   Puromycin HEK293                  23\n\n\n\n\n\n\n\nDutta, Shubham. 2024. Tidyplate: Transform Microplate Data into Tidy Dataframes. https://CRAN.R-project.org/package=tidyplate."
+    "text": "Microtiter plates or microplates have become a standard tool in analytical research and clinical diagnostic testing laboratories. They are convenient, high-throughput tools for organizing tissue culture, PCR tests (such as HIV/ COVID screening), or immunological assays such as ELISA, RIA and FIA. They offer many advantages over traditional assay formats including reduced sample and reagent volumes, increased throughput, and ease of automation. The goal of tidyplate is to help researchers convert different types of microplates into tidy dataframes which can be used in data analysis. tidyplate accepts xlsx and csv files formatted in a specific way as input. tidyplate supports all types of standard microplate formats namely: 6-well, 12-well, 24-well, 48-well, 96-well, 384-well, and 1536-well plates.\ntidyplate has four functions:\n\ntidy_plate: Transforms the input file (xlsx or csv) into a tidy dataframe.\ncheck_plate: Checks whether the input file is valid for use with tidy_plate().\nview_plate_names: Returns names/ id(s) of each plate in the input file.\nbuild_plate: Generates a csv or xlsx template for each plate type.\n\n\n\nTo install tidyplate from CRAN:\n\ninstall.packages(\"tidyplate\")\n\nYou can install the development version of tidyplate from GitHub with:\n\ndevtools::install_github(\"shubhamdutta26/tidyplate\")\n\n\n\n\nThe input excel or csv file should be formatted in a specific way:\n\nTop left corner must hold the name for that plate.\nColumn names should be: 1, 2, 3, and so on and so forth.\nRow names should be: A, B, C, and so on and so forth.\nThere must be an empty row between each plate.\n\n\n\n\nThis is an example which shows you how to use the tidyplate. If the input file is an xlsx file it reads the first sheet by default. Users can specify sheet using the sheet argument for an xlsx file. Users can also specify the variable name of column where well ids will be stored (defaults to “well”). Please make sure that well_id argument does not match individual plate names in the input file.\nFirst check if the input file is valid or not:\n\nlibrary(tidyplate)\nfile &lt;- system.file(\"extdata\", \n                    \"example_12_well.xlsx\", \n                    package = \"tidyplate\")\ncheck_plate(file) # No error for valid file\n\nexample_12_well.xlsx: OK; Plate type: 12-well\n\nincorrect_file &lt;- system.file(\"extdata\",\n                              \"incorrect_format.csv\",\n                              package = \"tidyplate\")\ncheck_plate(incorrect_file) # Error type displayed\n\nError: Verify row and column ids in incorrect_format.csv.\n\n\nAs mentioned above, the formatting of the input file is very important. A csv or excel template for each plate type can be created using the build_plate function:\n\nbuild_plate(plate_type = 96, \n            n_plates = 2, \n            file_type = \"xlsx\") # default is csv\n\nIf you want to retrieve the names of individual plates:\n\nview_plate_names(file)\n\n[1] \"drug\"             \"cell_line\"        \"percent_survived\"\n\n\nRead and import the file as a tibble:\n\ndata &lt;- tidy_plate(file)\n\nData: example_12_well.xlsx; Plate type: 12-well plate\n\nhead(data)\n\n# A tibble: 6 × 4\n  well  drug      cell_line percent_survived\n  &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                &lt;int&gt;\n1 A01   Neomycin  HEK293                  60\n2 A02   Puromycin HEK293                  NA\n3 A03   Neomycin  Hela                    52\n4 A04   Puromycin Hela                    18\n5 B01   Neomycin  HEK293                  62\n6 B02   Puromycin HEK293                  23\n\n\nImport multiple csv files into separate tibbles:\n\ncsv_files &lt;- list.files(path = file, \n                        pattern = \"*.csv\",\n                        full.names = TRUE)\n\nnames &lt;- tools::file_path_sans_ext(basename(csv_files))\n\n# Loop through the filenames and assign data\nfor(i in seq_along(csv_files)) {\n  assign(names[i], tidy_plate(csv_files[i]))\n}\n\nImport multiple csv files as a list of tibbles:\n\n# Initialize an empty list to store tibbles for each file\ntb_csv_list &lt;- list()\n\n# Loop through the filenames and assign data\nfor(i in seq_along(csv_files)) {\n  tb_csv_list[[i]] &lt;- tidy_plate(csv_files[i])\n}\n\nFor multiple excel sheets in the same excel file:\n\n# as individual tibbles\nxl_file &lt;- system.file(\"extdata\", \n                       \"multisheet_example.xlsx\", \n                       package = \"tidyplate\")\n\nsheets &lt;- readxl::excel_sheets(xl_file)\n\nfor (sheet in sheets) {\n  tb &lt;- tidy_plate(xl_file, sheet = sheet)\n  name &lt;- paste0(\"tb_\", sheet)\n  assign(name, tb)\n}\n\nData: multisheet_example.xlsx; Plate type: 6-well plate\n\n\nData: multisheet_example.xlsx; Plate type: 12-well plate\nData: multisheet_example.xlsx; Plate type: 12-well plate\n\n# as elements of a list\n# Initialize an empty list to store tibbles for each sheet\ntb_xl_list &lt;- list()\n\nfor (sheet in sheets) {\n  tb_xl_list[[sheet]] &lt;- tidy_plate(xl_file, sheet = sheet)\n}\n\nData: multisheet_example.xlsx; Plate type: 6-well plate\nData: multisheet_example.xlsx; Plate type: 12-well plate\nData: multisheet_example.xlsx; Plate type: 12-well plate\n\n\n\n\n\nDutta, Shubham. 2024. Tidyplate: Transform Microplate Data into Tidy Dataframes. https://CRAN.R-project.org/package=tidyplate."
   },
   {
     "objectID": "projects/tidyplate/tidyplate.html#installation",
     "href": "projects/tidyplate/tidyplate.html#installation",
     "title": "tidyplate: Transform Microplate Data into Tidy Dataframes",
     "section": "",
-    "text": "To install tidyplate from CRAN:\n\n# install.packages(\"tidyplate\")\n\nYou can install the development version of tidyplate from GitHub with:\n\n# install.packages(\"devtools\")\n# devtools::install_github(\"shubhamdutta26/tidyplate\")"
+    "text": "To install tidyplate from CRAN:\n\ninstall.packages(\"tidyplate\")\n\nYou can install the development version of tidyplate from GitHub with:\n\ndevtools::install_github(\"shubhamdutta26/tidyplate\")"
   },
   {
     "objectID": "projects/tidyplate/tidyplate.html#formating-the-input-data-file",
     "href": "projects/tidyplate/tidyplate.html#formating-the-input-data-file",
     "title": "tidyplate: Transform Microplate Data into Tidy Dataframes",
     "section": "",
-    "text": "This figure demonstrates how to format the 12-well plate input file. Colors are for visualization purposes only.\n\n\n\n\nThe input xlsx or csv should be formatted in a specific way:\n\nTop left corner must hold the name for that plate.\nColumn names should be: 1, 2, 3, and so on and so forth.\nRow names should be: A, B, C, and so on and so forth.\nThere must be an empty row between each plate."
+    "text": "The input excel or csv file should be formatted in a specific way:\n\nTop left corner must hold the name for that plate.\nColumn names should be: 1, 2, 3, and so on and so forth.\nRow names should be: A, B, C, and so on and so forth.\nThere must be an empty row between each plate."
   },
   {
     "objectID": "projects/tidyplate/tidyplate.html#example",
     "href": "projects/tidyplate/tidyplate.html#example",
     "title": "tidyplate: Transform Microplate Data into Tidy Dataframes",
     "section": "",
-    "text": "This is an example which shows you how to use the tidyplate. If the input file is an xlsx file it reads the first sheet by default. Users can specify sheet using the sheet argument for an xlsx file. Users can also specify the variable name of column where well ids will be stored (defaults to “well”). Please make sure that well_id argument does not match individual plate names in the input file.\nFirst check if the input file is valid or not:\n\nlibrary(tidyplate)\ncheck_plate(\"example_12_well.xlsx\")\n\nexample_12_well.xlsx: OK; Plate type: 12 well\n\n\nImport the file as a tidy dataframe:\n\ndata &lt;- tidy_plate(\"example_12_well.xlsx\")\n\nData: example_12_well.xlsx; Plate type: 12 well plate\n\nhead(data)\n\n# A tibble: 6 × 4\n  well  drug      cell_line percent_survived\n  &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                &lt;int&gt;\n1 A01   Neomycin  HEK293                  60\n2 A02   Puromycin HEK293                  22\n3 A03   Neomycin  Hela                    52\n4 A04   Puromycin Hela                    18\n5 B01   Neomycin  HEK293                  62\n6 B02   Puromycin HEK293                  23"
+    "text": "This is an example which shows you how to use the tidyplate. If the input file is an xlsx file it reads the first sheet by default. Users can specify sheet using the sheet argument for an xlsx file. Users can also specify the variable name of column where well ids will be stored (defaults to “well”). Please make sure that well_id argument does not match individual plate names in the input file.\nFirst check if the input file is valid or not:\n\nlibrary(tidyplate)\nfile &lt;- system.file(\"extdata\", \n                    \"example_12_well.xlsx\", \n                    package = \"tidyplate\")\ncheck_plate(file) # No error for valid file\n\nexample_12_well.xlsx: OK; Plate type: 12-well\n\nincorrect_file &lt;- system.file(\"extdata\",\n                              \"incorrect_format.csv\",\n                              package = \"tidyplate\")\ncheck_plate(incorrect_file) # Error type displayed\n\nError: Verify row and column ids in incorrect_format.csv.\n\n\nAs mentioned above, the formatting of the input file is very important. A csv or excel template for each plate type can be created using the build_plate function:\n\nbuild_plate(plate_type = 96, \n            n_plates = 2, \n            file_type = \"xlsx\") # default is csv\n\nIf you want to retrieve the names of individual plates:\n\nview_plate_names(file)\n\n[1] \"drug\"             \"cell_line\"        \"percent_survived\"\n\n\nRead and import the file as a tibble:\n\ndata &lt;- tidy_plate(file)\n\nData: example_12_well.xlsx; Plate type: 12-well plate\n\nhead(data)\n\n# A tibble: 6 × 4\n  well  drug      cell_line percent_survived\n  &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                &lt;int&gt;\n1 A01   Neomycin  HEK293                  60\n2 A02   Puromycin HEK293                  NA\n3 A03   Neomycin  Hela                    52\n4 A04   Puromycin Hela                    18\n5 B01   Neomycin  HEK293                  62\n6 B02   Puromycin HEK293                  23\n\n\nImport multiple csv files into separate tibbles:\n\ncsv_files &lt;- list.files(path = file, \n                        pattern = \"*.csv\",\n                        full.names = TRUE)\n\nnames &lt;- tools::file_path_sans_ext(basename(csv_files))\n\n# Loop through the filenames and assign data\nfor(i in seq_along(csv_files)) {\n  assign(names[i], tidy_plate(csv_files[i]))\n}\n\nImport multiple csv files as a list of tibbles:\n\n# Initialize an empty list to store tibbles for each file\ntb_csv_list &lt;- list()\n\n# Loop through the filenames and assign data\nfor(i in seq_along(csv_files)) {\n  tb_csv_list[[i]] &lt;- tidy_plate(csv_files[i])\n}\n\nFor multiple excel sheets in the same excel file:\n\n# as individual tibbles\nxl_file &lt;- system.file(\"extdata\", \n                       \"multisheet_example.xlsx\", \n                       package = \"tidyplate\")\n\nsheets &lt;- readxl::excel_sheets(xl_file)\n\nfor (sheet in sheets) {\n  tb &lt;- tidy_plate(xl_file, sheet = sheet)\n  name &lt;- paste0(\"tb_\", sheet)\n  assign(name, tb)\n}\n\nData: multisheet_example.xlsx; Plate type: 6-well plate\n\n\nData: multisheet_example.xlsx; Plate type: 12-well plate\nData: multisheet_example.xlsx; Plate type: 12-well plate\n\n# as elements of a list\n# Initialize an empty list to store tibbles for each sheet\ntb_xl_list &lt;- list()\n\nfor (sheet in sheets) {\n  tb_xl_list[[sheet]] &lt;- tidy_plate(xl_file, sheet = sheet)\n}\n\nData: multisheet_example.xlsx; Plate type: 6-well plate\nData: multisheet_example.xlsx; Plate type: 12-well plate\nData: multisheet_example.xlsx; Plate type: 12-well plate"
   },
   {
     "objectID": "projects/tidyplate/tidyplate.html#references",
@@ -103,6 +103,104 @@
     "title": "tidyplate: Transform Microplate Data into Tidy Dataframes",
     "section": "",
     "text": "Dutta, Shubham. 2024. Tidyplate: Transform Microplate Data into Tidy Dataframes. https://CRAN.R-project.org/package=tidyplate."
+  },
+  {
+    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html",
+    "href": "blogs/elisa-curve-fitting/elisa_fit.html",
+    "title": "ELISA curve fitting using ggplot2",
+    "section": "",
+    "text": "Here is an example of how to fit and analyse ELISA data using ggplot2, drc, and broom.\n\nlibrary(tidyplate)\nlibrary(tidyverse)\nlibrary(drc)\nlibrary(broom)\nlibrary(ggsci)\n\nFirst we import plate data using the tidy_plate function from the tidyplate package:\n\nraw_data &lt;- tidy_plate(\"data/elisa_example.xlsx\")\nglimpse(raw_data)\n\nRows: 50\nColumns: 10\n$ well                &lt;chr&gt; \"A01\", \"A02\", \"A03\", \"A04\", \"A05\", \"A06\", \"B01\", \"…\n$ coat_protein_name   &lt;chr&gt; \"sBACE\", \"sBACE\", \"sBACE\", \"sBACE\", \"sBACE\", \"sBAC…\n$ coat_protein_ug     &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, …\n$ coat_protein_source &lt;chr&gt; \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"…\n$ primary_mab_name    &lt;chr&gt; \"aBACE\", \"aBACE\", \"aBACE\", \"aSARS\", \"aSARS\", \"aSAR…\n$ primary_mab_clone   &lt;chr&gt; \"6626.1\", \"6626.1\", \"6626.1\", \"CC6.29\", \"CC6.29\", …\n$ primary_mab_conc    &lt;dbl&gt; 10.0000000, 10.0000000, 10.0000000, 10.0000000, 10…\n$ secondary_mab_name  &lt;chr&gt; \"goat-aHuman\", \"goat-aHuman\", \"goat-aHuman\", \"goat…\n$ secondary_mab_dil   &lt;chr&gt; \"1to5000\", \"1to5000\", \"1to5000\", \"1to5000\", \"1to50…\n$ od450               &lt;dbl&gt; 1.396, 1.170, 1.299, 1.324, 1.170, 1.299, 1.374, 1…"
+  },
+  {
+    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#introduction",
+    "href": "blogs/elisa-curve-fitting/elisa_fit.html#introduction",
+    "title": "ELISA curve fitting using ggplot2",
+    "section": "",
+    "text": "Here is an example of how to fit and analyse ELISA data using ggplot2, drc, and broom.\n\nlibrary(tidyplate)\nlibrary(tidyverse)\nlibrary(drc)\nlibrary(broom)\nlibrary(ggsci)\n\nFirst we import plate data using the tidy_plate function from the tidyplate package:\n\nraw_data &lt;- tidy_plate(\"data/elisa_example.xlsx\")\nglimpse(raw_data)\n\nRows: 50\nColumns: 10\n$ well                &lt;chr&gt; \"A01\", \"A02\", \"A03\", \"A04\", \"A05\", \"A06\", \"B01\", \"…\n$ coat_protein_name   &lt;chr&gt; \"sBACE\", \"sBACE\", \"sBACE\", \"sBACE\", \"sBACE\", \"sBAC…\n$ coat_protein_ug     &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, …\n$ coat_protein_source &lt;chr&gt; \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"NS0\", \"…\n$ primary_mab_name    &lt;chr&gt; \"aBACE\", \"aBACE\", \"aBACE\", \"aSARS\", \"aSARS\", \"aSAR…\n$ primary_mab_clone   &lt;chr&gt; \"6626.1\", \"6626.1\", \"6626.1\", \"CC6.29\", \"CC6.29\", …\n$ primary_mab_conc    &lt;dbl&gt; 10.0000000, 10.0000000, 10.0000000, 10.0000000, 10…\n$ secondary_mab_name  &lt;chr&gt; \"goat-aHuman\", \"goat-aHuman\", \"goat-aHuman\", \"goat…\n$ secondary_mab_dil   &lt;chr&gt; \"1to5000\", \"1to5000\", \"1to5000\", \"1to5000\", \"1to50…\n$ od450               &lt;dbl&gt; 1.396, 1.170, 1.299, 1.324, 1.170, 1.299, 1.374, 1…"
+  },
+  {
+    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#data-for-plotting",
+    "href": "blogs/elisa-curve-fitting/elisa_fit.html#data-for-plotting",
+    "title": "ELISA curve fitting using ggplot2",
+    "section": "Data for plotting",
+    "text": "Data for plotting\n\n# Compute the antigen blank mean\ncompute_blank_mean &lt;- raw_data |&gt;\n  dplyr::mutate(blank_mean = rowMeans(across(X1:X12)))\n\nblank_mean &lt;- compute_blank_mean[8, 13] |&gt; as.numeric() |&gt; round(digits = 4)\n\n# Substract blank_mean from all data\nraw_data_minus_blank &lt;- raw_data |&gt;\n  purrr::map_df(~. - blank_mean)\n\n# Generating antibody dilution values\nab_dilutions &lt;- round(10 / 4^(0:6), 3)\n\n# Full data\nfinal_data &lt;- tibble(ab_dilutions, raw_data_minus_blank[1:7, 1:12]) |&gt;\n  rename(\"Positive_1\" = X1,\"Positive_2\" = X2,\"Positive_3\" = X3,\n         \"Experiment_1\" = X4,\"Experiment_2\" = X5,\"Experiment_3\" = X6,\"NoHisAntigen_1\" = X7,\"NoHisAntigen_2\" = X8,\"NoHisAntigen_3\" = X9,\n         \"SecondaryOnly_1\" = X10,\"SecondaryOnly_2\" = X11,\"SecondaryOnly_3\" = X12)\n\ndata_pivot &lt;- final_data |&gt;\n  pivot_longer(!ab_dilutions,\n               names_to = \"Experiment\",\n               values_to = \"od450\") |&gt;\n  separate(col = Experiment,\n           into = c(\"Experiment\", \"rep\"),\n           sep = \"_\")\n\n# compute stats\ndata_pivot_summary &lt;- data_pivot |&gt;\n  group_by(ab_dilutions, Experiment) |&gt;\n  summarise(\n    od450_sd = sd(od450),\n    od450_mean = mean(od450)\n  )\n\nfinal_data %&gt;% gt()\n\n\n\n\n\n\n\n\nab_dilutions\nPositive_1\nPositive_2\nPositive_3\nExperiment_1\nExperiment_2\nExperiment_3\nNoHisAntigen_1\nNoHisAntigen_2\nNoHisAntigen_3\nSecondaryOnly_1\nSecondaryOnly_2\nSecondaryOnly_3\n\n\n\n\n10.000\n2.8788\n2.9538\n2.8978\n2.2318\n2.8618\n2.8998\n-0.0012\n-0.0022\n-0.0002\n0.0008\n-0.0022\n-0.0012\n\n\n2.500\n2.8768\n2.9778\n2.9698\n2.9288\n2.8988\n2.8788\n-0.0022\n-0.0002\n0.0008\n-0.0002\n-0.0012\n-0.0012\n\n\n0.625\n2.5848\n2.5988\n2.7848\n2.5098\n2.2998\n2.5998\n-0.0012\n0.0008\n-0.0022\n-0.0012\n-0.0002\n-0.0002\n\n\n0.156\n1.7178\n1.8708\n1.7988\n1.7588\n1.6998\n1.6018\n0.0008\n0.0008\n0.0008\n-0.0002\n0.0008\n-0.0002\n\n\n0.039\n0.7408\n0.7758\n0.7348\n0.7628\n0.8008\n0.6608\n-0.0002\n0.0008\n0.0028\n-0.0002\n-0.0002\n-0.0022\n\n\n0.010\n0.2318\n0.2188\n0.2188\n0.1878\n0.1998\n0.2108\n-0.0002\n0.0008\n-0.0012\n-0.0002\n-0.0022\n-0.0012\n\n\n0.002\n0.0558\n0.0508\n0.0558\n0.0518\n0.0508\n0.0508\n-0.0002\n-0.0012\n-0.0012\n-0.0022\n-0.0012\n-0.0012"
+  },
+  {
+    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#the-final-plot",
+    "href": "blogs/elisa-curve-fitting/elisa_fit.html#the-final-plot",
+    "title": "ELISA curve fitting using ggplot2",
+    "section": "The final plot",
+    "text": "The final plot\n\ntheme_set(theme_bw(base_size = 20))\nggplot(summary, aes(x = primary_mab_conc, \n                    y = mean_od, \n                    group = primary_mab_name, \n                    color = primary_mab_name)) +\n  ggplot2::geom_point(shape = 21, size = 3, stroke = 1.5) +\n  geom_smooth(method = drc::drm, \n              method.args = list(fct = drc::L.4()),\n              se = FALSE, linewidth = 1) +\n  geom_errorbar(aes(ymin = mean_od - mean_sd,\n                    ymax = mean_od + mean_sd),\n                width = 0.1) +\n  scale_x_log10() +\n  scale_color_npg() +\n  labs(x = \"Log of antibody concentration (µg/ml)\",\n       y = \"OD~450~\",\n       color = NULL) +\n  theme(axis.title.y = ggtext::element_markdown(),\n        legend.position = c(0.2, 0.7))"
+  },
+  {
+    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#statistical-analysis-of-the-fit",
+    "href": "blogs/elisa-curve-fitting/elisa_fit.html#statistical-analysis-of-the-fit",
+    "title": "ELISA curve fitting using ggplot2",
+    "section": "Statistical analysis of the fit",
+    "text": "Statistical analysis of the fit\nWe have to remove “blanks” first before modeling.\n\nraw_data_no_blanks &lt;- subset(raw_data, primary_mab_name != \"blank\")\ndrm_model &lt;- drm(formula = od450~primary_mab_conc, \n                 curveid = primary_mab_name, \n                 data = raw_data_no_blanks, \n                 fct = LL.4(names=c(\"Slope\", \"Lower\", \"Upper\", \"ED50\")))\n# tidy(drm_model)\n# glance(drm_model)\n# augment(drm_model, data = raw_data_no_blanks)\n\n\nggplot(augment(drm_model, data = raw_data_no_blanks), \n       aes(.fitted, .resid, color = as.factor(primary_mab_conc))) +\n  geom_hline(yintercept = 0) +\n  geom_point(shape = 21, size = 3, stroke = 1.5) +\n  labs(color = \"dilutions\") +\n  scale_color_npg() +\n  facet_grid(cols = vars(primary_mab_name))"
+  },
+  {
+    "objectID": "blogs/pymol-setup/pymol.html",
+    "href": "blogs/pymol-setup/pymol.html",
+    "title": "Setting up Pymol for visualizations",
+    "section": "",
+    "text": "This is how I setup Pymol before visualization and posing of different molecules.\n\nOpen Pymol and load the pdb file.\nSet background color to white: Display &gt; Background &gt; White\nTo hide double bonds: Display &gt; Uncheck Show Valences\nTo display the molecule in maximum quality: Display &gt; Quality &gt; Maximum Quality\nTo only show the side chain of a residue: set cartoon_side_chain_helper, 1 or set cartoon_side_chain_helper, on"
+  },
+  {
+    "objectID": "blogs/biacore/biacore.html",
+    "href": "blogs/biacore/biacore.html",
+    "title": "Plot biacore data in R/ R Studio",
+    "section": "",
+    "text": "During the past weeks I was running a lot of antibody-antigen kinetics experiments on the Biacore T200. Unfortunately, the Biacore evaluation software cannot be used to make publication quality plots (as far as I know). As a result, I thought of using ggplot2 to plot biacore kinetics data. Lets jump right in."
+  },
+  {
+    "objectID": "blogs/biacore/biacore.html#introduction",
+    "href": "blogs/biacore/biacore.html#introduction",
+    "title": "Plot biacore data in R/ R Studio",
+    "section": "",
+    "text": "During the past weeks I was running a lot of antibody-antigen kinetics experiments on the Biacore T200. Unfortunately, the Biacore evaluation software cannot be used to make publication quality plots (as far as I know). As a result, I thought of using ggplot2 to plot biacore kinetics data. Lets jump right in."
+  },
+  {
+    "objectID": "blogs/biacore/biacore.html#preparing-the-data",
+    "href": "blogs/biacore/biacore.html#preparing-the-data",
+    "title": "Plot biacore data in R/ R Studio",
+    "section": "Preparing the data",
+    "text": "Preparing the data\nLoad required libraries:\n\nlibrary(readr)\nlibrary(tidyverse)\n\nImport the data into R Studio:\n\nraw_data &lt;- read_delim(\n  \"biacore_kinetics.txt\", \n  escape_double = FALSE, \n  trim_ws = TRUE\n)\n\nPreparing the data for plotting:\n\n# SELECT RELEVANT COLUMNS\ndata_final &lt;- raw_data %&gt;%\n  select(c(1, ends_with(\"Y\")))\n\n# RENAME COLUMNS (F = FITTED, NF = NOT FITTED)\nnames(data_final) &lt;- c(\"time\", \"2 nM-NF\", \"2 nM-F\", \"4 nM-NF\", \"4 nM-F\", \"8 nM-NF\", \n                       \"8 nM-F\", \"16 nM-NF\", \"16 nM-F\", \"32 nM-NF\", \"32 nM-F\", \n                       \"8 nM (rep 2)-NF\", \"8 nM (rep 2)-F\")\n\n# FINAL DATA BEFORE PLOTTING\nplot_data &lt;- data_final %&gt;% \n  pivot_longer(!time, names_to = \"sample\", values_to = \"values\") %&gt;% \n  separate(col=sample, into=c(\"samples\", \"type\"), sep='-') %&gt;% \n  filter(samples != \"8nM (rep 2)\")\n\n# SEPARATE FITTED AND NOT FITTED DATA\nnot_fitted &lt;- plot_data %&gt;% \n  filter(type == \"NF\")\nfitted &lt;- plot_data %&gt;% \n  filter(type == \"F\")"
+  },
+  {
+    "objectID": "blogs/biacore/biacore.html#the-final-plot",
+    "href": "blogs/biacore/biacore.html#the-final-plot",
+    "title": "Plot biacore data in R/ R Studio",
+    "section": "The final plot",
+    "text": "The final plot\n\nggplot(NULL) +\n  geom_line(data = not_fitted, aes(x = time, y = values, group = samples)) +\n  geom_line(data = fitted, aes(x = time, y = values, group = samples), color = \"red\") +\n  scale_x_continuous(expand = c(0, 0), \n                     limits = c(NA, 600),\n                     n.breaks = 14, \n                     labels = scales::label_number(suffix = \" s\")) +\n  scale_y_continuous(expand = c(0, 0), limits = c(-2, 15)) +\n  theme_classic(base_size = 20) +\n  labs(\n    caption = \"Note: Red line is fitted data\",\n    color = \"Soluble CD16\",\n    x = \"Time (seconds)\",\n    y = \"Response units (RU)\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    axis.title.x  = element_text(size = 13, face = \"bold\"),\n    axis.title.y  = element_text(size = 13, face = \"bold\"),\n    panel.grid.major = element_blank(),\n    panel.grid.minor = element_blank()\n  )"
+  },
+  {
+    "objectID": "blogs/ntnhp/ntnhp.html",
+    "href": "blogs/ntnhp/ntnhp.html",
+    "title": "Neotropic non-human primates",
+    "section": "",
+    "text": "Neotropic primates are the second largest non-human primate family in the world."
+  },
+  {
+    "objectID": "blogs/ntnhp/ntnhp.html#old-world-vs.-new-world",
+    "href": "blogs/ntnhp/ntnhp.html#old-world-vs.-new-world",
+    "title": "Neotropic non-human primates",
+    "section": "Old world vs. New world",
+    "text": "Old world vs. New world"
+  },
+  {
+    "objectID": "blogs/ntnhp/ntnhp.html#neotropic-primates-are-the-second-largest-family",
+    "href": "blogs/ntnhp/ntnhp.html#neotropic-primates-are-the-second-largest-family",
+    "title": "Neotropic non-human primates",
+    "section": "Neotropic primates are the second largest family",
+    "text": "Neotropic primates are the second largest family"
+  },
+  {
+    "objectID": "blogs/ubuntu-tidyverse/ubuntu.html",
+    "href": "blogs/ubuntu-tidyverse/ubuntu.html",
+    "title": "Installing tidyverse in Ubuntu 22.04.3 LTS",
+    "section": "",
+    "text": "Installing the Tidyverse package in Ubuntu can be challenging compared to Windows or Mac. This short tutorial will show how to install it in Ubuntu 22.04.3 LTS.\n\nUpdate Ubuntu from terminal\nsudo apt-get update\n\n\nInstall base R from terminal\nsudo apt install r-base\nsudo apt install r-base-dev\n\n\nInstall Ubuntu packages for R from terminal\nsudo apt-get install r-cran-curl r-cran-openssl r-cran-xml2\n\n\nInstall tidyverse from R/ RStudio\ninstall.packages(\"tidyverse\")"
   },
   {
     "objectID": "blogs/ggplot2-examples/ggplot_eg.html",
@@ -138,111 +236,6 @@
     "title": "ggplot2 examples",
     "section": "Adding custom suffixes to y-axis labels",
     "text": "Adding custom suffixes to y-axis labels\n\nggplot(df, aes(day, vcd)) +\n  geom_col(color = \"gray\") +\n  theme_classic(base_size = 20) +\n  labs(x = \"Time (days)\",\n       y = \"Viable cell density x 10^6^\") +\n  scale_y_continuous(limits = c(0, 20.001), \n                     n.breaks = 10, \n                     labels = scales::label_number(suffix = \" x 10^6^\"), \n                     expand = expansion(0)) +\n  theme(axis.text.y = ggtext::element_markdown(),\n        axis.title.y = ggtext::element_markdown())"
-  },
-  {
-    "objectID": "blogs/ubuntu-tidyverse/ubuntu.html",
-    "href": "blogs/ubuntu-tidyverse/ubuntu.html",
-    "title": "Installing tidyverse in Ubuntu 22.04.3 LTS",
-    "section": "",
-    "text": "Installing the Tidyverse package in Ubuntu can be challenging compared to Windows or Mac. This short tutorial will show how to install it in Ubuntu 22.04.3 LTS.\n\nUpdate Ubuntu from terminal\nsudo apt-get update\n\n\nInstall base R from terminal\nsudo apt install r-base\nsudo apt install r-base-dev\n\n\nInstall Ubuntu packages for R from terminal\nsudo apt-get install r-cran-curl r-cran-openssl r-cran-xml2\n\n\nInstall tidyverse from R/ RStudio\ninstall.packages(\"tidyverse\")"
-  },
-  {
-    "objectID": "blogs/ntnhp/ntnhp.html",
-    "href": "blogs/ntnhp/ntnhp.html",
-    "title": "Neotropic non-human primates",
-    "section": "",
-    "text": "Neotropic primates are the second largest non-human primate family in the world."
-  },
-  {
-    "objectID": "blogs/ntnhp/ntnhp.html#old-world-vs.-new-world",
-    "href": "blogs/ntnhp/ntnhp.html#old-world-vs.-new-world",
-    "title": "Neotropic non-human primates",
-    "section": "Old world vs. New world",
-    "text": "Old world vs. New world"
-  },
-  {
-    "objectID": "blogs/ntnhp/ntnhp.html#neotropic-primates-are-the-second-largest-family",
-    "href": "blogs/ntnhp/ntnhp.html#neotropic-primates-are-the-second-largest-family",
-    "title": "Neotropic non-human primates",
-    "section": "Neotropic primates are the second largest family",
-    "text": "Neotropic primates are the second largest family"
-  },
-  {
-    "objectID": "blogs/biacore/biacore.html",
-    "href": "blogs/biacore/biacore.html",
-    "title": "Plot biacore data in R/ R Studio",
-    "section": "",
-    "text": "During the past weeks I was running a lot of antibody-antigen kinetics experiments on the Biacore T200. Unfortunately, the Biacore evaluation software cannot be used to make publication quality plots (as far as I know). As a result, I thought of using ggplot2 to plot biacore kinetics data. Lets jump right in."
-  },
-  {
-    "objectID": "blogs/biacore/biacore.html#introduction",
-    "href": "blogs/biacore/biacore.html#introduction",
-    "title": "Plot biacore data in R/ R Studio",
-    "section": "",
-    "text": "During the past weeks I was running a lot of antibody-antigen kinetics experiments on the Biacore T200. Unfortunately, the Biacore evaluation software cannot be used to make publication quality plots (as far as I know). As a result, I thought of using ggplot2 to plot biacore kinetics data. Lets jump right in."
-  },
-  {
-    "objectID": "blogs/biacore/biacore.html#preparing-the-data",
-    "href": "blogs/biacore/biacore.html#preparing-the-data",
-    "title": "Plot biacore data in R/ R Studio",
-    "section": "Preparing the data",
-    "text": "Preparing the data\nLoad required libraries:\n\nlibrary(readr)\nlibrary(tidyverse)\n\nImport the data into R Studio:\n\nraw_data &lt;- read_delim(\n  \"biacore_kinetics.txt\", \n  escape_double = FALSE, \n  trim_ws = TRUE\n)\n\nPreparing the data for plotting:\n\n# SELECT RELEVANT COLUMNS\ndata_final &lt;- raw_data %&gt;%\n  select(c(1, ends_with(\"Y\")))\n\n# RENAME COLUMNS (F = FITTED, NF = NOT FITTED)\nnames(data_final) &lt;- c(\"time\", \"2 nM-NF\", \"2 nM-F\", \"4 nM-NF\", \"4 nM-F\", \"8 nM-NF\", \n                       \"8 nM-F\", \"16 nM-NF\", \"16 nM-F\", \"32 nM-NF\", \"32 nM-F\", \n                       \"8 nM (rep 2)-NF\", \"8 nM (rep 2)-F\")\n\n# FINAL DATA BEFORE PLOTTING\nplot_data &lt;- data_final %&gt;% \n  pivot_longer(!time, names_to = \"sample\", values_to = \"values\") %&gt;% \n  separate(col=sample, into=c(\"samples\", \"type\"), sep='-') %&gt;% \n  filter(samples != \"8nM (rep 2)\")\n\n# SEPARATE FITTED AND NOT FITTED DATA\nnot_fitted &lt;- plot_data %&gt;% \n  filter(type == \"NF\")\nfitted &lt;- plot_data %&gt;% \n  filter(type == \"F\")"
-  },
-  {
-    "objectID": "blogs/biacore/biacore.html#the-final-plot",
-    "href": "blogs/biacore/biacore.html#the-final-plot",
-    "title": "Plot biacore data in R/ R Studio",
-    "section": "The final plot",
-    "text": "The final plot\n\nggplot(NULL) +\n  geom_line(data = not_fitted, aes(x = time, y = values, group = samples)) +\n  geom_line(data = fitted, aes(x = time, y = values, group = samples), color = \"red\") +\n  scale_x_continuous(expand = c(0, 0), \n                     limits = c(NA, 600),\n                     n.breaks = 14, \n                     labels = scales::label_number(suffix = \" s\")) +\n  scale_y_continuous(expand = c(0, 0), limits = c(-2, 15)) +\n  theme_classic(base_size = 20) +\n  labs(\n    caption = \"Note: Red line is fitted data\",\n    color = \"Soluble CD16\",\n    x = \"Time (seconds)\",\n    y = \"Response units (RU)\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    axis.title.x  = element_text(size = 13, face = \"bold\"),\n    axis.title.y  = element_text(size = 13, face = \"bold\"),\n    panel.grid.major = element_blank(),\n    panel.grid.minor = element_blank()\n  )"
-  },
-  {
-    "objectID": "blogs/pymol-setup/pymol.html",
-    "href": "blogs/pymol-setup/pymol.html",
-    "title": "Setting up Pymol for visualizations",
-    "section": "",
-    "text": "This is how I setup Pymol before visualization and posing of different molecules.\n\nOpen Pymol and load the pdb file.\nSet background color to white: Display &gt; Background &gt; White\nTo hide double bonds: Display &gt; Uncheck Show Valences\nTo display the molecule in maximum quality: Display &gt; Quality &gt; Maximum Quality\nTo only show the side chain of a residue: set cartoon_side_chain_helper, 1 or set cartoon_side_chain_helper, on"
-  },
-  {
-    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html",
-    "href": "blogs/elisa-curve-fitting/elisa_fit.html",
-    "title": "ELISA curve fitting using ggplot2",
-    "section": "",
-    "text": "Here is an example of how to fit and analyse ELISA data using ggplot2, drc, and broom.\n\nlibrary(drc)\nlibrary(tidyverse)\nlibrary(openxlsx)\nlibrary(broom)\nlibrary(ggsci)\nlibrary(gt)\n\n\nraw_data &lt;- read.xlsx(xlsxFile = \"test-data/elisa-test-triplicate.xlsx\",\n                      rowNames = F,\n                      colNames = F,\n                      rows = c(19:26),\n                      cols = c(3:14))"
-  },
-  {
-    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#introduction",
-    "href": "blogs/elisa-curve-fitting/elisa_fit.html#introduction",
-    "title": "ELISA curve fitting using ggplot2",
-    "section": "",
-    "text": "Here is an example of how to fit and analyse ELISA data using ggplot2, drc, and broom.\n\nlibrary(drc)\nlibrary(tidyverse)\nlibrary(openxlsx)\nlibrary(broom)\nlibrary(ggsci)\nlibrary(gt)\n\n\nraw_data &lt;- read.xlsx(xlsxFile = \"test-data/elisa-test-triplicate.xlsx\",\n                      rowNames = F,\n                      colNames = F,\n                      rows = c(19:26),\n                      cols = c(3:14))"
-  },
-  {
-    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#data-for-plotting",
-    "href": "blogs/elisa-curve-fitting/elisa_fit.html#data-for-plotting",
-    "title": "ELISA curve fitting using ggplot2",
-    "section": "Data for plotting",
-    "text": "Data for plotting\n\n# Compute the antigen blank mean\ncompute_blank_mean &lt;- raw_data |&gt;\n  dplyr::mutate(blank_mean = rowMeans(across(X1:X12)))\n\nblank_mean &lt;- compute_blank_mean[8, 13] |&gt; as.numeric() |&gt; round(digits = 4)\n\n# Substract blank_mean from all data\nraw_data_minus_blank &lt;- raw_data |&gt;\n  purrr::map_df(~. - blank_mean)\n\n# Generating antibody dilution values\nab_dilutions &lt;- round(10 / 4^(0:6), 3)\n\n# Full data\nfinal_data &lt;- tibble(ab_dilutions, raw_data_minus_blank[1:7, 1:12]) |&gt;\n  rename(\"Positive_1\" = X1,\"Positive_2\" = X2,\"Positive_3\" = X3,\n         \"Experiment_1\" = X4,\"Experiment_2\" = X5,\"Experiment_3\" = X6,\"NoHisAntigen_1\" = X7,\"NoHisAntigen_2\" = X8,\"NoHisAntigen_3\" = X9,\n         \"SecondaryOnly_1\" = X10,\"SecondaryOnly_2\" = X11,\"SecondaryOnly_3\" = X12)\n\ndata_pivot &lt;- final_data |&gt;\n  pivot_longer(!ab_dilutions,\n               names_to = \"Experiment\",\n               values_to = \"od450\") |&gt;\n  separate(col = Experiment,\n           into = c(\"Experiment\", \"rep\"),\n           sep = \"_\")\n\n# compute stats\ndata_pivot_summary &lt;- data_pivot |&gt;\n  group_by(ab_dilutions, Experiment) |&gt;\n  summarise(\n    od450_sd = sd(od450),\n    od450_mean = mean(od450)\n  )\n\nfinal_data %&gt;% gt()\n\n\n\n\n\n\n\nab_dilutions\nPositive_1\nPositive_2\nPositive_3\nExperiment_1\nExperiment_2\nExperiment_3\nNoHisAntigen_1\nNoHisAntigen_2\nNoHisAntigen_3\nSecondaryOnly_1\nSecondaryOnly_2\nSecondaryOnly_3\n\n\n\n\n10.000\n2.8788\n2.9538\n2.8978\n2.2318\n2.8618\n2.8998\n-0.0012\n-0.0022\n-0.0002\n0.0008\n-0.0022\n-0.0012\n\n\n2.500\n2.8768\n2.9778\n2.9698\n2.9288\n2.8988\n2.8788\n-0.0022\n-0.0002\n0.0008\n-0.0002\n-0.0012\n-0.0012\n\n\n0.625\n2.5848\n2.5988\n2.7848\n2.5098\n2.2998\n2.5998\n-0.0012\n0.0008\n-0.0022\n-0.0012\n-0.0002\n-0.0002\n\n\n0.156\n1.7178\n1.8708\n1.7988\n1.7588\n1.6998\n1.6018\n0.0008\n0.0008\n0.0008\n-0.0002\n0.0008\n-0.0002\n\n\n0.039\n0.7408\n0.7758\n0.7348\n0.7628\n0.8008\n0.6608\n-0.0002\n0.0008\n0.0028\n-0.0002\n-0.0002\n-0.0022\n\n\n0.010\n0.2318\n0.2188\n0.2188\n0.1878\n0.1998\n0.2108\n-0.0002\n0.0008\n-0.0012\n-0.0002\n-0.0022\n-0.0012\n\n\n0.002\n0.0558\n0.0508\n0.0558\n0.0518\n0.0508\n0.0508\n-0.0002\n-0.0012\n-0.0012\n-0.0022\n-0.0012\n-0.0012"
-  },
-  {
-    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#the-final-plot",
-    "href": "blogs/elisa-curve-fitting/elisa_fit.html#the-final-plot",
-    "title": "ELISA curve fitting using ggplot2",
-    "section": "The final plot",
-    "text": "The final plot\n\nggplot(data_pivot_summary, \n       aes(x = ab_dilutions, \n           y = od450_mean, \n           color = Experiment, \n           group = Experiment,\n           shape = Experiment)) +\n  geom_point(size = 3, stroke = 1) +\n  geom_smooth(method = drm, \n              method.args = list(fct = L.4()), \n              se = F, \n              linewidth = 1.0) +\n  geom_errorbar(aes(ymin = od450_mean-od450_sd, \n                    ymax = od450_mean+od450_sd, \n                    color = Experiment),\n                size = 1.0,\n                width = 0.1) +\n  scale_x_log10() +\n  scale_y_continuous(limits = c(-0.5, 3.5),\n                     expand = expansion(0),\n                     n.breaks = 7) +\n  theme_classic(base_size = 20) +\n  labs(x = \"Log antibody dilutions (µg/ml)\",\n       y = \"OD~450~\") +\n  scale_color_manual(name = NULL,\n                     labels = c(\"Experiment\", \"Negative\", \"Positive\", \"Detection only\"),\n                     values = c(\"#E64B35FF\", \"#4DBBD5FF\", \"#00A087FF\", \"#3C5488FF\")\n                     ) +\n  scale_shape_manual(name = NULL,\n                     labels = c(\"Experiment\", \"Negative\", \"Positive\", \"Detection only\"),\n                     values = c(0,1,2,5)\n                     ) +\n  theme(axis.title.y = ggtext::element_markdown(),\n        legend.position = c(0.2, 0.7))"
-  },
-  {
-    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#statistical-analysis-of-the-fit",
-    "href": "blogs/elisa-curve-fitting/elisa_fit.html#statistical-analysis-of-the-fit",
-    "title": "ELISA curve fitting using ggplot2",
-    "section": "Statistical analysis of the fit",
-    "text": "Statistical analysis of the fit\n\ndrm_model &lt;- drm(formula = od450~ab_dilutions, \n                 curveid = Experiment, \n                 data = data_pivot, \n                 fct = LL.4(names=c(\"Slope\", \"Lower\", \"Upper\", \"ED50\")))\n# tidy(drm_model) %&gt;% gt()\n# glance(drm_model) %&gt;% gt()\n# augment(drm_model, data = data_pivot) %&gt;% gt()\n\n\nggplot(augment(drm_model, data = data_pivot), \n       aes(.fitted, .resid, color = as.factor(ab_dilutions))) +\n  geom_hline(yintercept = 0) +\n  geom_point(shape = 21, size = 3, stroke = 1.5) +\n  theme_bw(base_size = 20) +\n  labs(color = \"dilutions (Log)\") +\n  scale_color_npg()"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact Me",
-    "section": "",
-    "text": "MassbiologicsUniversity of Massachusetts Medical School 460 Walk Hill St Mattapan, MA 02126 Cell: 508-502-0586 Office: 617-474-3266 shubhamdutta26@gmail.com shubham.dutta@umassmed.edu\nOr connect with me on GitHub or Linkedin."
   },
   {
     "objectID": "projects/immunotherapy/immunotherapy.html",
@@ -327,5 +320,12 @@
     "title": "Shubham Dutta",
     "section": "",
     "text": "ELISA curve fitting using ggplot2\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2023\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 examples\n\n\n\n\n\n\n\n\n\n\n\nMay 25, 2023\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up Pymol for visualizations\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2023\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nInstalling tidyverse in Ubuntu 22.04.3 LTS\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2023\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nNeotropic non-human primates\n\n\n\n\n\n\n\n\n\n\n\nMar 9, 2023\n\n\nShubham Dutta\n\n\n\n\n\n\n\n\n\n\n\n\nPlot biacore data in R/ R Studio\n\n\n\n\n\n\n\n\n\n\n\nMar 4, 2023\n\n\nShubham Dutta\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blogs/elisa-curve-fitting/elisa_fit.html#prepare-data-before-plotting",
+    "href": "blogs/elisa-curve-fitting/elisa_fit.html#prepare-data-before-plotting",
+    "title": "ELISA curve fitting using ggplot2",
+    "section": "Prepare data before plotting",
+    "text": "Prepare data before plotting\n\nblank_data &lt;- raw_data |&gt;\n    dplyr::filter(primary_mab_name == \"blank\")\nmean_blank &lt;- mean(blank_data[[\"od450\"]], na.rm = TRUE)\n\nsummary &lt;- raw_data |&gt;\n    dplyr::filter(primary_mab_name != \"blank\") |&gt;\n    dplyr::mutate(blanked_od = od450 - mean_blank) |&gt;\n    dplyr::group_by(primary_mab_name, primary_mab_conc) |&gt;\n    dplyr::summarise(\n      mean_od = mean(blanked_od, na.rm = TRUE),\n      mean_sd = sd(blanked_od, na.rm = TRUE),\n      .groups = 'drop'\n    )\nhead(summary)\n\n# A tibble: 6 × 4\n  primary_mab_name primary_mab_conc mean_od mean_sd\n  &lt;chr&gt;                       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 aBACE                     0.00244   0.138  0.0797\n2 aBACE                     0.00977   0.214  0.0626\n3 aBACE                     0.0391    0.395  0.0644\n4 aBACE                     0.156     0.740  0.0531\n5 aBACE                     0.625     1.11   0.0358\n6 aBACE                     2.5       1.28   0.0486"
   }
 ]

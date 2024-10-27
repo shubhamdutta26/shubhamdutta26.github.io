@@ -21,8 +21,6 @@ website:
         text: Skills
       - href: publications.qmd
         text: Publications
-      - href: contact.qmd
-        text: Contact
     right:
       - icon: envelope
         href: mailto:shubhamdutta26@gmail.com
@@ -42,8 +40,7 @@ website:
 format:
   html:
     theme: 
-      light: cosmo
-      dark: [cosmo, theme-dark.scss]
+      light: custom.scss
     css: styles.css
 
 editor: visual

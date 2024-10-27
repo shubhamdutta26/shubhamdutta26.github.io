@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -117,10 +117,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../contact.html"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -209,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The Hippo pathway regulates the transcriptional coactivator YAP to control cell proliferation, organ size, and stem cell maintenance. Multiple factors, such as substrate stiffness, cell density, and G protein-coupled receptor signaling, regulate YAP through their effects on the F-actin cytoskeleton, although the mechanism is not known. Here we show that angiomotin proteins (AMOT130, AMOTL1, and AMOTL2) connect F-actin architecture to YAP regulation. First, we show that angiomotins are required to relocalize YAP to the cytoplasm in response to various manipulations that perturb the actin cytoskeleton. Second, angiomotins associate with F-actin through a conserved F-actin-binding domain, and mutants defective for F-actin binding show enhanced ability to retain YAP in the cytoplasm. Third, F-actin and YAP compete for binding to AMOT130, explaining how F-actin inhibits AMOT130-mediated cytoplasmic retention of YAP. Furthermore, we find that LATS can synergize with F-actin perturbations by phosphorylating free AMOT130 to keep it from associating with F-actin. Together these results uncover a mechanism for how F-actin levels modulate YAP localization, allowing cells to make developmental and proliferative decisions based on diverse inputs that regulate actin architecture.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="angiomotins.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="467"></p>
+<p><img src="angiomotins.png" class="img-fluid figure-img" width="467"></p>
 <figcaption>Model of F-actin–regulated angiomotin (AMOT) inhibition of YAP.</figcaption>
 </figure>
 </div>
@@ -445,6 +441,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -479,7 +493,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Shubham Dutta">
-<meta name="dcterms.date" content="2024-01-11">
+<meta name="dcterms.date" content="2024-10-26">
 
 <title>Shubham Dutta - tidyplate: Transform Microplate Data into Tidy Dataframes</title>
 <style>
@@ -56,27 +56,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -171,10 +151,6 @@ div.csl-indent {
     <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../contact.html"> 
-<span class="menu-text">Contact</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -238,7 +214,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 11, 2024</p>
+        <p class="date">October 26, 2024</p>
       </div>
     </div>
     
@@ -259,37 +235,28 @@ div.csl-indent {
 
 <section id="tidyplate" class="level1">
 <h1>tidyplate</h1>
-<p>Microtiter plates or microplates have become a standard tool in analytical research and clinical diagnostic testing laboratories. They are convenient, high-throughput tools for organizing tissue culture, PCR tests (such as HIV/ COVID screening), or immunological assays such as ELISA, RIA and FIA. They offer many advantages over traditional assay formats including reduced sample and reagent volumes, increased throughput, and ease of automation. The goal of <code>tidyplate</code> is to help researchers convert different types of microplates into tidy dataframes which can be used in data analysis <span class="citation" data-cites="tidyplate">(<a href="#ref-tidyplate" role="doc-biblioref">Dutta 2024</a>)</span>. <code>tidyplate</code> accepts xlsx and csv files formatted in a specific way as input. <code>tidyplate</code> supports all types of standard microplate formats namely: 6-well, 12-well, 24-well, 48-well, 96-well, 384-well, and 1536-well plates.</p>
-<p><code>tidyplate</code> has two functions:</p>
+<p>Microtiter plates or microplates have become a standard tool in analytical research and clinical diagnostic testing laboratories. They are convenient, high-throughput tools for organizing tissue culture, PCR tests (such as HIV/ COVID screening), or immunological assays such as ELISA, RIA and FIA. They offer many advantages over traditional assay formats including reduced sample and reagent volumes, increased throughput, and ease of automation. The goal of <code>tidyplate</code> is to help researchers convert different types of microplates into tidy dataframes which can be used in data analysis. <code>tidyplate</code> accepts xlsx and csv files formatted in a specific way as input. <code>tidyplate</code> supports all types of standard microplate formats namely: 6-well, 12-well, 24-well, 48-well, 96-well, 384-well, and 1536-well plates.</p>
+<p><code>tidyplate</code> has four functions:</p>
 <ul>
-<li><code>tidy_plate</code>: This function takes the input file (xlsx or csv) and transforms into a tidy dataframe.</li>
-<li><code>check_plate</code>: This function checks whether the input file is valid for use with <code>tidy_plate()</code> function.</li>
+<li><code>tidy_plate</code>: Transforms the input file (xlsx or csv) into a tidy dataframe.</li>
+<li><code>check_plate</code>: Checks whether the input file is valid for use with <code>tidy_plate()</code>.</li>
+<li><code>view_plate_names</code>: Returns names/ id(s) of each plate in the input file.</li>
+<li><code>build_plate</code>: Generates a csv or xlsx template for each plate type.</li>
 </ul>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
 <p>To install tidyplate from CRAN:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("tidyplate")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyplate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can install the development version of tidyplate from <a href="https://github.com/">GitHub</a> with:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("devtools")</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github("shubhamdutta26/tidyplate")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"shubhamdutta26/tidyplate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="formating-the-input-data-file" class="level2">
 <h2 class="anchored" data-anchor-id="formating-the-input-data-file">Formating the input data file</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="tidy_plate.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>This figure demonstrates how to format the 12-well plate input file. Colors are for visualization purposes only.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>The input xlsx or csv should be formatted in a specific way:</p>
+<p>The input excel or csv file should be formatted in a specific way:</p>
 <ul>
 <li>Top left corner must hold the name for that plate.</li>
 <li>Column names should be: 1, 2, 3, and so on and so forth.</li>
@@ -303,38 +270,114 @@ div.csl-indent {
 <p>First check if the input file is valid or not:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyplate)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_plate</span>(<span class="st">"example_12_well.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata"</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"example_12_well.xlsx"</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">package =</span> <span class="st">"tidyplate"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">check_plate</span>(file) <span class="co"># No error for valid file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>example_12_well.xlsx: OK; Plate type: 12 well</code></pre>
+<pre><code>example_12_well.xlsx: OK; Plate type: 12-well</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>incorrect_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata"</span>,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"incorrect_format.csv"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">package =</span> <span class="st">"tidyplate"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">check_plate</span>(incorrect_file) <span class="co"># Error type displayed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: Verify row and column ids in incorrect_format.csv.</code></pre>
 </div>
 </div>
-<p>Import the file as a tidy dataframe:</p>
+<p>As mentioned above, the formatting of the input file is very important. A csv or excel template for each plate type can be created using the <code>build_plate</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tidy_plate</span>(<span class="st">"example_12_well.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Data: example_12_well.xlsx; Plate type: 12 well plate</code></pre>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">build_plate</span>(<span class="at">plate_type =</span> <span class="dv">96</span>, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">n_plates =</span> <span class="dv">2</span>, </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">file_type =</span> <span class="st">"xlsx"</span>) <span class="co"># default is csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you want to retrieve the names of individual plates:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">view_plate_names</span>(file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "drug"             "cell_line"        "percent_survived"</code></pre>
+</div>
+</div>
+<p>Read and import the file as a tibble:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tidy_plate</span>(file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data: example_12_well.xlsx; Plate type: 12-well plate</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
   well  drug      cell_line percent_survived
   &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;                &lt;int&gt;
 1 A01   Neomycin  HEK293                  60
-2 A02   Puromycin HEK293                  22
+2 A02   Puromycin HEK293                  NA
 3 A03   Neomycin  Hela                    52
 4 A04   Puromycin Hela                    18
 5 B01   Neomycin  HEK293                  62
 6 B02   Puromycin HEK293                  23</code></pre>
 </div>
 </div>
+<p>Import multiple csv files into separate tibbles:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>csv_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> file, </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">pattern =</span> <span class="st">"*.csv"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(<span class="fu">basename</span>(csv_files))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through the filenames and assign data</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq_along</span>(csv_files)) {</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign</span>(names[i], <span class="fu">tidy_plate</span>(csv_files[i]))</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Import multiple csv files as a <strong>list</strong> of tibbles:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize an empty list to store tibbles for each file</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tb_csv_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through the filenames and assign data</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq_along</span>(csv_files)) {</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  tb_csv_list[[i]] <span class="ot">&lt;-</span> <span class="fu">tidy_plate</span>(csv_files[i])</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For multiple excel sheets in the same excel file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># as individual tibbles</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>xl_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">"extdata"</span>, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"multisheet_example.xlsx"</span>, </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">package =</span> <span class="st">"tidyplate"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>sheets <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">excel_sheets</span>(xl_file)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (sheet <span class="cf">in</span> sheets) {</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  tb <span class="ot">&lt;-</span> <span class="fu">tidy_plate</span>(xl_file, <span class="at">sheet =</span> sheet)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  name <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"tb_"</span>, sheet)</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">assign</span>(name, tb)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data: multisheet_example.xlsx; Plate type: 6-well plate</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data: multisheet_example.xlsx; Plate type: 12-well plate
+Data: multisheet_example.xlsx; Plate type: 12-well plate</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># as elements of a list</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize an empty list to store tibbles for each sheet</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>tb_xl_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (sheet <span class="cf">in</span> sheets) {</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  tb_xl_list[[sheet]] <span class="ot">&lt;-</span> <span class="fu">tidy_plate</span>(xl_file, <span class="at">sheet =</span> sheet)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data: multisheet_example.xlsx; Plate type: 6-well plate
+Data: multisheet_example.xlsx; Plate type: 12-well plate
+Data: multisheet_example.xlsx; Plate type: 12-well plate</code></pre>
+</div>
+</div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-tidyplate" class="csl-entry" role="listitem">
-Dutta, Shubham. 2024. <em>Tidyplate: Transform Microplate Data into Tidy Dataframes</em>. <a href="https://CRAN.R-project.org/package=tidyplate">https://CRAN.R-project.org/package=tidyplate</a>.
-</div>
-</div>
+<p>Dutta, Shubham. 2024. Tidyplate: Transform Microplate Data into Tidy Dataframes. <a href="https://CRAN.R-project.org/package=tidyplate">https://CRAN.R-project.org/package=tidyplate</a>.</p>
 
 
 </section>
@@ -564,6 +607,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -598,7 +659,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
