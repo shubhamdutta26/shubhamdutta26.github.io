@@ -163,4 +163,4 @@ for (sheet in sheets) {
 
 ## References
 
-Dutta, Shubham. 2024. Tidyplate: Transform Microplate Data into Tidy Dataframes. [https://CRAN.R-project.org/package=tidyplate](https://CRAN.R-project.org/package=tidyplate).
+Dutta, Shubham. 2024. Tidyplate: Transform Microplate Data into Tidy Dataframes. <https://CRAN.R-project.org/package=tidyplate>.

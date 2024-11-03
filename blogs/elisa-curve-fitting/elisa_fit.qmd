@@ -22,6 +22,7 @@ library(ggsci)
 ```
 
 First we import plate data using the `tidy_plate` function from the `tidyplate` package:
+
 ```{r}
 #| label: import-elisa-data
 raw_data <- tidy_plate("data/elisa_example.xlsx")
@@ -29,6 +30,7 @@ glimpse(raw_data)
 ```
 
 ## Prepare data before plotting
+
 ```{r}
 #| label: data-prep
 blank_data <- raw_data |>
@@ -57,7 +59,7 @@ ggplot(summary, aes(x = primary_mab_conc,
                     y = mean_od, 
                     group = primary_mab_name, 
                     color = primary_mab_name)) +
-  ggplot2::geom_point(shape = 21, size = 3, stroke = 1.5) +
+  geom_point(shape = 21, size = 3, stroke = 1.5) +
   geom_smooth(method = drc::drm, 
               method.args = list(fct = drc::L.4()),
               se = FALSE, linewidth = 1) +
@@ -76,6 +78,7 @@ ggplot(summary, aes(x = primary_mab_conc,
 ## Statistical analysis of the fit
 
 We have to remove "blanks" first before modeling.
+
 ```{r}
 #| label: stats-elisa-data
 raw_data_no_blanks <- subset(raw_data, primary_mab_name != "blank")
